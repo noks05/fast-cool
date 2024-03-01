@@ -29,14 +29,6 @@
   border-color: var(--red-01);
 }
 
-.btn-reset {
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
 .btn-default {
   padding: 18px 16px;
   border-radius: 50px;

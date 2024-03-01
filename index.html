@@ -19,101 +19,185 @@
 <body>
   <div class="main-wrapper">
 
+    <div class="bg-fixed"></div>
+
     <header class="header">
 
-      <div class="head">
-        <div class="flex">
-          <img width="" height="" src="" alt="logo">
+      <div class="header__top">
+
+        <div class="header__tel tel-info">
+          <span class="tel-info__img"></span>
+          <div class="tel-info__content">
+            <span class="tel-info__text">
+              ежедневно с 10:00 до 22:00
+            </span>
+            <a href="tel:+71231234567" class="tel-info__tel">
+              +7 (123) 123-45-67
+            </a>
+          </div>
         </div>
 
-        <nav class="head__nav nav">
-          <ul class="nav__list items-center">
-            <li class="nav__item">
-              <a class="nav__link" href="#">
-                Главная
-              </a>
+        <div class="header__logo-block logo-block">
+          <div class="flex logo-block__img-wrap">
+            <img width="" height="" src="" alt="logo">
+          </div>
+          <h1>
+            Fast-Cool
+          </h1>
+          <span>
+            Фастфуд
+          </span>
+        </div>
+
+        <button class="btn-default header__order-tel" type="button">
+          Заказать звонок
+        </button>
+
+      </div> <!-- header__top  -->
+
+      <nav class="header__bottom nav">
+        <ul class="nav__list items-center">
+          <li class="nav__item">
+            <a class="nav__link" href="#menu">
+              Меню
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              Преимущества
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              О нас
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              Заказать доставку
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              Спецпредложения
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              Галерея
+            </a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#contacts">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav> <!-- header__bottom  -->
+
+      <!-- <button class="header__burger-btn btn-reset" type="button">
+      </button>
+      <nav class="burger-menu">
+        <ul class="burger-menu__list">
+          <li class="burger-menu__item">
+            <a class="burger-menu__link" href="#">
+              Главная
+            </a>
+          </li>
+          <li class="burger-menu__item">
+            <a class="burger-menu__link" href="#">
+              Услуги
+            </a>
+          </li>
+          <li class="burger-menu__item">
+            <a class="burger-menu__link" href="#">
+              Сопровождение
+            </a>
+          </li>
+          <li class="burger-menu__item">
+            <a class="burger-menu__link" href="#">
+              Полезное
+            </a>
+          </li>
+          <li class="burger-menu__item">
+            <a class="burger-menu__link" href="#">
+              О компании
+            </a>
+          </li>
+          <li class="burger-menu__item">
+            <a class="burger-menu__link" href="#">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav> -->
+    </header>
+
+    <div class="bg-block-transparent"></div>
+
+    <main>
+      <section class="menu">
+        <h2 class="menu__tile">
+          Наше меню
+        </h2>
+
+        <div class="container">
+
+          <ul class="menu__tabs">
+            <li class="menu__tab" data-tab="tab-1">
+              Фастфуд
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#why-us">
-                Услуги
-              </a>
+            <li class="menu__tab" data-tab="tab-2">
+              Закуски
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#specialists">
-                Сопровождение
-              </a>
+            <li class="menu__tab" data-tab="tab-3">
+              Салаты
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#articles">
-                Полезное
-              </a>
+            <li class="menu__tab" data-tab="tab-4">
+              Десерты
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#reviews">
-                О компании
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#contacts">
-                Контакты
-              </a>
+            <li class="menu__tab" data-tab="tab-5">
+              Напитки
             </li>
           </ul>
-        </nav>
+
+          <div class="menu__contents">
+            <div class="menu__content menu-content" id="tab-1">
+              <ul class="menu-content__list">
+                <li class="menu-content__item menu-card">
+                  <div class="menu-card__inner">
+                    <div class="menu-card__img-wrap">
+                      <img src="./src/img/steak-burger.jpg" alt="steak-burger">
+                      <div class="menu-card__name">
+                        Стейк-бургер
+                      </div>
+                      <div class="menu-card__price">
+                        560 ₽
+                      </div>
+                      <button class="menu-card__order" type="button">
+                        Заказать
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="menu__content" id="tab-2">ttt2</div>
+            <div class="menu__content" id="tab-3">ttt3</div>
+            <div class="menu__content" id="tab-4">ttt4</div>
+            <div class="menu__content" id="tab-5">ttt5</div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
 
 
-        <button class="head__burger-btn btn-reset" type="button">
-        </button>
-      </div>
-
-  </div>
-
-
-  <nav class="burger-menu">
-    <ul class="burger-menu__list">
-      <li class="burger-menu__item">
-        <a class="burger-menu__link" href="#">
-          Главная
-        </a>
-      </li>
-      <li class="burger-menu__item">
-        <a class="burger-menu__link" href="#">
-          Услуги
-        </a>
-      </li>
-      <li class="burger-menu__item">
-        <a class="burger-menu__link" href="#">
-          Сопровождение
-        </a>
-      </li>
-      <li class="burger-menu__item">
-        <a class="burger-menu__link" href="#">
-          Полезное
-        </a>
-      </li>
-      <li class="burger-menu__item">
-        <a class="burger-menu__link" href="#">
-          О компании
-        </a>
-      </li>
-      <li class="burger-menu__item">
-        <a class="burger-menu__link" href="#">
-          Контакты
-        </a>
-      </li>
-    </ul>
-  </nav>
-  </header>
-
-  <main>
-
-
-  </main>
-
-  <footer class="footer">
-
-
-  </footer>
+    </footer>
   </div>
 
 </body>

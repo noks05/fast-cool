@@ -68,7 +68,9 @@
   --transition-duration-2: .2s ease-in-out;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 

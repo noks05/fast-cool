@@ -144,7 +144,7 @@
 
   <main>
     <section class="menu">
-      <h2 class="menu__title">
+      <h2 class="menu__title section-title">
         Наше меню
       </h2>
 
@@ -297,7 +297,7 @@
 
 
     <section class="advantages">
-      <h2 class="advantages__title">
+      <h2 class="advantages__title section-title">
         Наши преимущества
       </h2>
 
@@ -306,6 +306,7 @@
         <ul class="advantages__list">
 
           <li class="advantages__item">
+
             <div class="advantages__box">
               <div class="advantages__text">
                 <h3>
@@ -316,146 +317,270 @@
                 </p>
               </div>
             </div>
+
           </li>
 
-        </ul>
+          <li class="advantages__item">
+
+            <div class="advantages__box">
+              <div class="advantages__text">
+                <h3>
+                  Приходите на завтрак
+                </h3>
+                <p>
+                  Можно спокойно позавтракать с 8 утра, что редкость для большинства заведений
+                </p>
+              </div>
+            </div>
+
+          </li>
+
+          <li class="advantages__item">
+
+            <div class="advantages__box">
+              <div class="advantages__text">
+                <h3>
+                  Приходите на завтрак
+                </h3>
+                <p>
+                  Можно спокойно позавтракать с 8 утра, что редкость для большинства заведений
+                </p>
+              </div>
+            </div>
+
+          </li>
+
+        </ul><!-- advantages__list -->
 
       </div> <!-- container -->
     </section>
 
 
     <section class="about-us">
-      <div class="contaner">
+      <div class="container about-us__container">
+
         <div class="about-us__block">
-          <h2 class="about-us__title">
+          <h2 class="about-us__title section-title">
             О нас
           </h2>
-          <p class="about-us__descr">
-            Наш ресторан в 1997 году открыл двери своим гостям в самом центре Москвы, он стал идеальным местом для
-            семейного отдыха, веселых встреч с друзьями, партнерами и коллегами.
-            ​​​​​​​
-            Мы используем как традиционные, так и необычные продукты, которые приятно удивят Вас своим великолепием.
+          <div class="about-us__descr">
+            <p>
+              Наш ресторан в 1997 году открыл двери своим гостям в самом центре Москвы, он стал идеальным местом для
+              семейного отдыха, веселых встреч с друзьями, партнерами и коллегами.
+            </p>
 
-            Наш шеф-повар со своей командой каждый раз будет удивлять Вас новыми блюдами и дарить незабываемые
-            ощущения.
-          </p>
+            <p>Мы используем как традиционные, так и необычные продукты, которые приятно удивят Вас своим великолепием.
+            </p>
+
+            <p>
+              Наш шеф-повар со своей командой каждый раз будет удивлять Вас новыми блюдами и дарить незабываемые
+              ощущения.
+            </p>
+          </div>
         </div>
-      </div>
+      </div> <!-- container  -->
+
     </section>
 
 
-    <section class="delivery">
+    <section class="delivery flex">
 
       <div class="delivery__left">
-        <img src="./src/img/girl-with-burger.jpg" alt="girl with burger">
+        <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/HjJ71wE8frK4KeVohkWSCw/r/d/55.jpg" alt="girl with burger">
       </div> <!-- delivery__left -->
 
       <div class="delivery__right">
 
-        <h2 class="delivery__title">
-          Закажите доставку прямо сейчас
-        </h2>
-        <p class="delivery__descr">
-          Свяжемся с вами в ближайшее время
-        </p>
+        <div class="delivery__right-inner">
+          <h2 class="delivery__title">
+            Закажите доставку прямо сейчас
+          </h2>
+          <p class="delivery__descr">
+            Свяжемся с вами в ближайшее время
+          </p>
 
-        <form class="delivery__form delivery-form">
+          <form class="delivery__form delivery-form">
 
-          <div class="delivery-form__container">
-            <label class="delivery-form__name">
-              <span>
-                Имя
-              </span>
-              <input class="input-default" name="name" type="text">
+            <div class="delivery-form__container">
+              <label class="delivery-form__name">
+                <span class="delivery-form__label">
+                  <span class="delivery-form__star">*</span>
+                  Имя
+                </span>
+                <input class="input-default" name="name" type="text">
+              </label>
+
+              <label class="delivery-form__tel">
+                <span class="delivery-form__label">
+                  <span class="delivery-form__star">*</span>
+                  Телефон
+                </span>
+                <input class="input-default" name="tel" type="tel">
+              </label>
+
+              <label class="delivery-form__date">
+                <span class="delivery-form__label">
+                  <span class="delivery-form__star">*</span>
+                  Выбор даты
+                </span>
+                <input class="input-default" name="date" type="text">
+              </label>
+
+              <label class="delivery-form__guests">
+                <span class="delivery-form__label">
+                  Гости
+                </span>
+                <input class="input-default" name="guests" type="text">
+              </label>
+
+              <label class="delivery-form__wishes">
+                <span class="delivery-form__label">
+                  Ваши пожелания
+                </span>
+                <textarea class="input-default" name="wishes" cols="30" rows="10"></textarea>
+              </label>
+
+              <button class="delivery-form__submit btn-default" type="submit">
+                Перезвоните мне
+              </button>
+            </div> <!-- delivery-form__container -->
+
+
+            <label class="delivery-form__agreement items-start">
+              <label class="checkbox-custom delivery-form__checkbox flex">
+                <input type="checkbox" name="agreement">
+                <span></span>
+              </label>
+              <p>
+                <span class="delivery-form__star">*</span>
+                Я согласен на обработку моих <a href="#">персональных
+                  данных</a>
+              </p>
             </label>
+          </form>
+        </div>
 
-            <label class="delivery-form__tel">
-              <span>
-                Телефон
-              </span>
-              <input class="input-default" name="tel" type="tel">
-            </label>
-
-            <label class="delivery-form__date">
-              <span>
-                Выбор даты
-              </span>
-              <input class="input-default" name="date" type="text">
-            </label>
-
-            <label class="delivery-form__guests">
-              <span>
-                Гости
-              </span>
-              <input class="input-default" name="guests" type="text">
-            </label>
-
-            <label class="delivery-form__wishes">
-              <span>
-                Ваши пожелания
-              </span>
-              <textarea class="input-default" name="wishes" cols="30" rows="10"></textarea>
-            </label>
-
-            <button class="btn-default" type="submit">
-              Перезвоните мне
-            </button>
-          </div> <!-- delivery-form__container -->
-
-
-          <label class="delivery-form__agreement">
-            <input class="delivery-form__checkbox" type="checkbox" name="" id="">
-            <span class="delivery-form__checkbox-castom"></span>
-            <p>
-              Я согласен на обработку моих <a href="#">персональных данных</a>
-            </p>
-          </label>
-        </form>
-
-      </div> <!-- delivery__left -->
+      </div> <!-- delivery__right -->
     </section>
 
 
     <section class="spec-offers">
       <div class="container">
 
+        <h2 class="spec-offers__title section-title">
+          Специальные предложения
+        </h2>
+
         <ul class="spec-offers__list">
 
           <li class="spec-offers__item">
             <div class="spec-offers__card">
-              <div class="spec-offers__img-wrap">
-                <img src="./src/img/spec-offers-buc.jpg" alt="">
+              <div class="spec-offers__img-wrap flex">
+                <img src="	https://lp3-gr-fast-food.21.oml.ru/thumb/2/LkS_8dur5Lci20F9htb-kQ/406r/d/55230494_2.jpg"
+                  alt="">
               </div>
 
-              <div class="spec-offers__text">
-                <h3>
+              <div class="spec-offers__texts">
+                <h3 class="spec-offers__card-title">
                   Хрустящие баклажаны
                 </h3>
-                <p class="spec-offers__descr">
-                <ul>
-                  <li>
+                <ul class="spec-offers__card-list">
+                  <li class="spec-offers__card-item">
                     Баклажаны 3 штуки
                     ​</li>
-                  <li>
+                  <li class="spec-offers__card-item">
                     Пшеничная мука 500 г
                   </li>
-                  <li>
+                  <li class="spec-offers__card-item">
                     Кукурузная мука 120 г
                   </li>
-                  <li>
+                  <li class="spec-offers__card-item">
                     ​Помидоры черри 3 штуки
                   </li>
                 </ul>
-                </p>
+
+                <div class="spec-offers__card-price">
+                  от 2 800 ₽
+                </div>
+
+                <button class="spec-offers__card-offer btn-default" type="button">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </li>
+
+          <li class="spec-offers__item">
+            <div class="spec-offers__card">
+              <div class="spec-offers__img-wrap flex">
+                <img src="	https://lp3-gr-fast-food.21.oml.ru/thumb/2/LkS_8dur5Lci20F9htb-kQ/406r/d/55230494_2.jpg"
+                  alt="">
               </div>
 
-              <div class="spec-offers__price">
-                от 2 800 ₽
+              <div class="spec-offers__texts">
+                <h3 class="spec-offers__card-title">
+                  Хрустящие баклажаны
+                </h3>
+                <ul class="spec-offers__card-list">
+                  <li class="spec-offers__card-item">
+                    Баклажаны 3 штуки
+                    ​</li>
+                  <li class="spec-offers__card-item">
+                    Пшеничная мука 500 г
+                  </li>
+                  <li class="spec-offers__card-item">
+                    Кукурузная мука 120 г
+                  </li>
+                  <li class="spec-offers__card-item">
+                    ​Помидоры черри 3 штуки
+                  </li>
+                </ul>
+
+                <div class="spec-offers__card-price">
+                  от 2 800 ₽
+                </div>
+
+                <button class="spec-offers__card-offer btn-default" type="button">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </li>
+
+          <li class="spec-offers__item">
+            <div class="spec-offers__card">
+              <div class="spec-offers__img-wrap flex">
+                <img src="	https://lp3-gr-fast-food.21.oml.ru/thumb/2/LkS_8dur5Lci20F9htb-kQ/406r/d/55230494_2.jpg"
+                  alt="">
               </div>
 
-              <button class="spec-offers__offer" type="button">
-                Заказать
-              </button>
+              <div class="spec-offers__texts">
+                <h3 class="spec-offers__card-title">
+                  Хрустящие баклажаны
+                </h3>
+                <ul class="spec-offers__card-list">
+                  <li class="spec-offers__card-item">
+                    Баклажаны 3 штуки
+                    ​</li>
+                  <li class="spec-offers__card-item">
+                    Пшеничная мука 500 г
+                  </li>
+                  <li class="spec-offers__card-item">
+                    Кукурузная мука 120 г
+                  </li>
+                  <li class="spec-offers__card-item">
+                    ​Помидоры черри 3 штуки
+                  </li>
+                </ul>
+
+                <div class="spec-offers__card-price">
+                  от 2 800 ₽
+                </div>
+
+                <button class="spec-offers__card-offer btn-default" type="button">
+                  Заказать
+                </button>
+              </div>
             </div>
           </li>
 
@@ -465,23 +590,23 @@
     </section>
 
 
-    <section class="gallery"></section>
+    <section class="gallery">gallery</section>
 
     <section class="contacts">
 
       <div class="contacts__map"></div>
 
       <address class="contacts__contacts-box">
-        <h2 class="contacts__title">
+        <h2 class="contacts__title section-title">
           Контакты
         </h2>
 
         <ul class="contacts__list">
           <li class="contacts__item">
-            <a href="tel:+80001111111">
+            <a class="contacts__tel" href="tel:+80001111111">
               8 000 111-11-11
             </a>
-            <a href="mailto:login@domain.ru">
+            <a class="contacts__email" href="mailto:login@domain.ru">
               login@domain.ru
             </a>
           </li>
@@ -492,23 +617,66 @@
           </li>
           <li class="contacts__item">
             <span> г. Москва,</span>
-            ​​​​​​​​​​​​​​Ленинский проспект
+            ​​​​​​​​​​​​​<span>​Ленинский проспект</span>
           </li>
 
-          <ul class="contacts__sotials">
-            <li class="contacts__sotial">
-              <a href="https://vk.ru">
-                <svg>vk</svg>
-              </a>
-            </li>
-            <li class="contacts__sotial">
-              <a href="https://od.ru">
-                <svg>od</svg>
-              </a>
-            </li>
-          </ul>
+        </ul> <!-- contacts__list  -->
 
-        </ul>
+        <ul class="contacts__socials">
+          <li>
+            <a class="contacts__link flex" href="https://vk.ru">
+              <svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+                <title>VK</title>
+                <desc>Created with Sketch.</desc>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="soc_circle" transform="translate(-180.000000, -81.000000)">
+                    <g id="color_theme">
+                      <g id="Color" transform="translate(80.000000, 80.000000)">
+                        <g id="VK" transform="translate(100.000000, 1.000000)">
+                          <path
+                            d="M0,30 C0,13.4314567 13.4314567,0 30,0 C46.5685433,0 60,13.4314567 60,30 C60,46.5685433 46.5685433,60 30,60 C13.4314567,60 0,46.5685433 0,30 Z"
+                            id="back" fill="#4C6C91"></path>
+                          <path
+                            d="M31.569328,38.8451001 C31.569328,38.8451001 32.1468577,38.7821111 32.4426657,38.4702386 C32.7134316,38.1844836 32.7040409,37.6452361 32.7040409,37.6452361 C32.7040409,37.6452361 32.6680431,35.1272115 33.8591003,34.7554227 C35.0329412,34.3897791 36.5401529,37.1904861 38.1397068,38.2674447 C39.3479804,39.081693 40.2651414,38.9034802 40.2651414,38.9034802 L44.5394874,38.8451001 C44.5394874,38.8451001 46.7744805,38.7099042 45.7148934,36.9846195 C45.6272466,36.8432783 45.0966705,35.7079396 42.5376974,33.3758095 C39.8566448,30.9346008 40.2166226,31.3294345 43.4439025,27.1060974 C45.4096948,24.5343017 46.1953856,22.9641852 45.9496616,22.2928144 C45.7164585,21.6506336 44.2702865,21.8211649 44.2702865,21.8211649 L39.459104,21.8503549 C39.459104,21.8503549 39.1022563,21.8027291 38.8377509,21.9578971 C38.5795059,22.1099926 38.4120379,22.464882 38.4120379,22.464882 C38.4120379,22.464882 37.651389,24.4544132 36.6356253,26.1474352 C34.4929744,29.7178373 33.6368531,29.9068044 33.286266,29.6855746 C32.4708378,29.1678356 32.6743036,27.6084733 32.6743036,26.5007883 C32.6743036,23.0394647 33.209575,21.5968625 31.633498,21.2235373 C31.1107475,21.0990956 30.7257277,21.0176708 29.3875491,21.0038439 C27.6706111,20.9869444 26.2181786,21.0099892 25.3949249,21.4048228 C24.8471325,21.6675331 24.4245498,22.2544064 24.6827948,22.2882054 C25.0005144,22.329686 25.7204701,22.4787088 26.1023597,22.9887662 C26.5953729,23.6478465 26.5781565,25.125784 26.5781565,25.125784 C26.5781565,25.125784 26.8614435,29.2000983 25.9161103,29.7055468 C25.2681501,30.0527545 24.3791612,29.3445121 22.4681483,26.1044183 C21.4899475,24.4451953 20.7512103,22.6108321 20.7512103,22.6108321 C20.7512103,22.6108321 20.6087843,22.2682333 20.3536695,22.0838752 C20.0453406,21.8611091 19.6149323,21.7919748 19.6149323,21.7919748 L15.0432133,21.8211649 C15.0432133,21.8211649 14.3561251,21.8396007 14.1041406,22.1330374 C13.8803282,22.392675 14.0869242,22.9319225 14.0869242,22.9319225 C14.0869242,22.9319225 17.6663564,31.1527579 21.7200203,35.2962065 C25.4371832,39.0939836 29.6567499,38.8451001 29.6567499,38.8451001 L31.569328,38.8451001 Z"
+                            id="Shape" fill="#FFFFFF"></path>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="contacts__link flex" href="https://od.ru">
+              <svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+                <title>OK</title>
+                <desc>Created with Sketch.</desc>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="soc_circle" transform="translate(-280.000000, -80.000000)">
+                    <g id="color_theme">
+                      <g id="Color" transform="translate(80.000000, 80.000000)">
+                        <g id="OK" transform="translate(200.000000, 0.000000)">
+                          <path
+                            d="M0,30 C0,13.4314567 13.4314567,0 30,0 C46.5685433,0 60,13.4314567 60,30 C60,46.5685433 46.5685433,60 30,60 C13.4314567,60 0,46.5685433 0,30 Z"
+                            id="back" fill="#F68634"></path>
+                          <path
+                            d="M29.9796249,20.5370751 C31.8107716,20.5370751 33.3002578,21.9743946 33.3002578,23.7419779 C33.3002578,25.5081716 31.8107716,26.9464175 29.9796249,26.9464175 C28.1499177,26.9464175 26.6589919,25.5081716 26.6589919,23.7419779 C26.6589919,21.9743946 28.1499177,20.5370751 29.9796249,20.5370751 L29.9796249,20.5370751 Z M29.9796249,31.4816398 C25.5567529,31.4816398 21.9597205,28.009932 21.9597205,23.7419779 C21.9597205,19.4726342 25.5567529,16 29.9796249,16 C34.4034565,16 37.9995292,19.4726342 37.9995292,23.7419779 C37.9995292,28.009932 34.4034565,31.4816398 29.9796249,31.4816398 Z M33.2449529,37.8003773 L37.7282872,42.1285478 C38.6467397,43.0132659 38.6467397,44.4501222 37.7282872,45.3357666 C36.8107944,46.2214111 35.3237075,46.2214111 34.4071744,45.3357666 L29.9991781,41.0826351 L25.5950207,45.3357666 C25.1357945,45.7781257 24.5340497,45.9995368 23.932305,45.9995368 C23.3315199,45.9995368 22.7307349,45.7781257 22.2715087,45.3357666 C21.3540159,44.4501222 21.3540159,43.0141923 22.2705489,42.1285478 L26.7543631,37.8003773 C25.1218785,37.4413949 23.5474571,36.816997 22.0973194,35.9387638 C20.999879,35.2708248 20.670215,33.871488 21.3616936,32.8112159 C22.0512528,31.7495542 23.5013905,31.429944 24.6007503,32.097883 C27.8839541,34.0915095 32.1134424,34.0919727 35.3985657,32.097883 C36.4979255,31.429944 37.9475833,31.7495542 38.6385821,32.8112159 C39.3300607,33.8705616 38.999437,35.2708248 37.9019966,35.9387638 C36.4518589,36.8179234 34.8774374,37.4413949 33.2449529,37.8003773 Z"
+                            id="Shape" fill="#FFFFFF"></path>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </li>
+        </ul> <!-- contacts__socials  -->
+
       </address>
 
     </section>

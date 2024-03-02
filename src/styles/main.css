@@ -118,10 +118,6 @@
 
 .menu__title {
   padding-top: 50px;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 150%;
   color: var(--red);
   background-color: #fff;
 }
@@ -234,49 +230,200 @@
 
 
 /* advantages  */
-.advantages {}
+.advantages {
+  padding-block: 30px;
+}
 
-.advantages__title {}
+.advantages__title {
+  margin-bottom: 32px;
+}
 
-.advantages__list {}
+.advantages__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 48px;
+}
 
 .advantages__item {}
 
-.advantages__box {}
+.advantages__box {
+  padding-top: 24px;
+}
 
-.advantages__text {}
+.advantages__text {
+  position: relative;
+  padding: 32px 16px;
+  padding-top: 57px;
+  border-radius: 16px;
+  background-color: var(--white-smoke);
+}
+
+.advantages__text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  padding: 16px;
+  border-radius: 100%;
+  background-image: url('../img/ok.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 48px;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+}
+
+.advantages__text h3 {
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--dark-lighter);
+}
+
+.advantages__text p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  color: var(--dark-lighter-07);
+}
 
 
 
 /* about-us  */
-.about-us {}
+.about-us {
+  padding-block: 50px;
+}
 
-.contaner {}
+.about-us__container {
+  position: relative;
+  padding-block: 32px;
+}
 
-.about-us__block {}
+.about-us__container::before,
+.about-us__container::after {
+  content: '';
+  position: absolute;
+  height: 287px;
+  width: 432px;
+  border-radius: 16px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
-.about-us__title {}
+.about-us__container::before {
+  top: 0;
+  left: 0;
+  background-image: url('https://lp3-gr-fast-food.21.oml.ru/thumb/2/s9cRrp_0R0yH6LI6k7zyUQ/628r/d/55219694_2.jpg');
+}
 
-.about-us__descr {}
+.about-us__container::after {
+  bottom: 0;
+  right: 0;
+  background-image: url('	https://lp3-gr-fast-food.21.oml.ru/thumb/2/tm0u3eUtSH-8qfxVxtrBUA/628r/d/55224334_2.jpg');
+}
+
+.about-us__block {
+  position: relative;
+  max-width: 524px;
+  width: 100%;
+  padding: 36px;
+  margin-inline: auto;
+  border-radius: 16px;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.about-us__title {
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+.about-us__descr {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--dark-lighter-07);
+}
+
+.about-us__descr>p {
+  margin-bottom: 25px;
+}
 
 
 
 /* delivery  */
 .delivery {}
 
-.delivery__left {}
+.delivery__left,
+.delivery__right {
+  width: 50vw;
+}
 
-.delivery__right {}
+.delivery__left img {
+  object-fit: cover;
+}
 
-.delivery__title {}
+.delivery__right {
+  padding: 80px 20px;
+  background-color: var(--white-smoke);
+}
 
-.delivery__descr {}
+.delivery__right-inner {
+  max-width: 482px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.delivery__title {
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--red);
+}
+
+.delivery__descr {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--dark-lighter);
+}
 
 .delivery__form {}
 
 .delivery-form {}
 
-.delivery-form__container {}
+.delivery-form__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr) 2fr;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.delivery-form__label {
+  padding-bottom: 8px;
+  padding-left: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 100%;
+  color: var(--dark-lighter);
+}
+
+.delivery-form__star {
+  color: var(--red);
+  font-size: 18px;
+  vertical-align: middle;
+}
 
 .delivery-form__name {}
 
@@ -288,34 +435,113 @@
 
 .delivery-form__guests {}
 
-.delivery-form__wishes {}
+.delivery-form__wishes textarea {
+  height: 100%;
+  max-height: 103px;
+  resize: none;
+}
 
-.delivery-form__agreement {}
+.delivery-form__submit {
+  margin-top: 17px;
+}
 
-.delivery-form__checkbox {}
+.delivery-form__agreement p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 150%;
+  color: var(--dark-lighter);
+}
+
+.delivery-form__agreement a {
+  text-decoration: underline;
+  color: var(--red);
+}
+
+.delivery-form__checkbox {
+  margin-right: 8px;
+}
 
 .delivery-form__checkbox-castom {}
 
 
 
 /* spec-offers  */
-.spec-offers {}
+.spec-offers {
+  padding-top: 100px;
+  padding-bottom: 120px;
+}
 
-.spec-offers__list {}
+.spec-offers__title {
+  color: var(--dark-light);
+  line-height: 125%;
+  margin-bottom: 40px;
+}
+
+.spec-offers__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 32px;
+}
 
 .spec-offers__item {}
 
-.spec-offers__card {}
+.spec-offers__card {
+  padding: 30px;
+  border: 1px solid var(--dark-lighter-01);
+  border-radius: 16px;
+}
 
-.spec-offers__img-wrap {}
+.spec-offers__img-wrap {
+  height: 230px;
+  width: 100%;
+  margin-bottom: 25px;
+  border-radius: 16px;
+  overflow: hidden;
+}
 
-.spec-offers__text {}
+.spec-offers__img-wrap img {
+  object-fit: cover;
+}
 
-.spec-offers__descr {}
+.spec-offers__texts {
+  padding-inline: 32px;
+}
 
-.spec-offers__price {}
+.spec-offers__card-title {
+  margin-bottom: 16px;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 145%;
+  color: var(--dark-lighter);
+}
 
-.spec-offers__offer {}
+.spec-offers__card-list {
+  margin-bottom: 24px;
+}
+
+.spec-offers__card-item {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--dark-lighter-07);
+}
+
+.spec-offers__card-item:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+.spec-offers__card-price {
+  margin-bottom: 24px;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 125%;
+  color: var(--red);
+}
+
+.spec-offers__card-offer {
+  width: 100%;
+}
 
 
 
@@ -325,21 +551,71 @@
 
 
 /* contacts  */
-.contacts {}
+.contacts {
+  padding-block: 64px;
+}
 
 .contacts__map {}
 
-.contacts__contacts-box {}
+.contacts__contacts-box {
+  max-width: 368px;
+  width: 100%;
+  margin-left: 110px;
+  padding: 38px 60px 40px;
+  border-radius: 16px;
+  border: 1px solid var(--dark-lighter-01);
+  box-shadow: 0px 4px 35px var(--dark-lighter-01);
+}
 
-.contacts__title {}
+.contacts__title {
+  margin-bottom: 25px;
+  text-align: left;
+  font-size: 35px;
+  line-height: 125%;
+}
 
-.contacts__list {}
+.contacts__list {
+  margin-bottom: 25px;
+}
 
-.contacts__item {}
+.contacts__item {
+  border-bottom: 1px solid var(--white-smoke);
+  padding-block: 15px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--dark);
+}
 
-.contacts__sotials {}
+.contacts__item span {
+  display: inline-block;
+}
 
-.contacts__sotial {}
+.contacts__tel {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 138%;
+}
+
+.contacts__email {
+  display: inline-block;
+  line-height: 138%;
+  color: var(--red);
+}
+
+.contacts__socials {
+  display: grid;
+  grid-template-columns: 30px 30px;
+  grid-template-rows: auto;
+  gap: 20px;
+}
+
+.contacts__link {
+  height: 30px;
+  width: 30px;
+}
 
 
 

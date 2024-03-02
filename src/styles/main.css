@@ -1,3 +1,347 @@
 @import './normalize.css';
 @import './base.css';
 @import './default.css';
+
+/* glop  */
+
+
+/* header  */
+.header {
+  position: relative;
+  padding-block: 35px;
+  background-color: #fff;
+}
+
+.header__top {
+  margin-bottom: 60px;
+}
+
+.header__tel {}
+
+.tel-info {}
+
+.tel-info__img {
+  padding: 12px;
+  border-radius: 100%;
+  margin-right: 20px;
+  background-color: var(--red-01);
+}
+
+.tel-info__content {}
+
+.tel-info__text {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 142%;
+  color: var(--red);
+}
+
+.tel-info__tel {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--dark-light);
+}
+
+.header__logo-block {}
+
+.logo-block {}
+
+.logo-block__img-wrap {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 8px;
+}
+
+.logo-block h1 {
+  margin-bottom: 8px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 145%;
+  color: var(--dark-light);
+}
+
+.btn-default {}
+
+.header__order-tel {}
+
+.header__bottom {}
+
+.nav {}
+
+.nav__list {}
+
+.nav__item:not(:last-child) {
+  margin-right: 5px;
+}
+
+.nav__link {
+  border-radius: 50px;
+  border: 1px solid var(--white-smoke);
+  padding: 14px 30px 12px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 125%;
+  color: var(--dark-lighter);
+}
+
+
+
+/* bg - header  */
+.bg-fixed {
+  position: fixed;
+  inset: 0;
+  background-attachment: fixed;
+  background-image: url('https://lp3-gr-fast-food.21.oml.ru/d/3609706/d/1212.jpg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  z-index: -1;
+}
+
+.bg-block-transparent {
+  width: 100%;
+  height: 344px;
+  background-color: transparent;
+}
+
+
+
+/* menu  */
+.menu {
+  padding-bottom: 50px;
+  background-color: var(--white-smoke);
+}
+
+.menu__title {
+  padding-top: 50px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--red);
+  background-color: #fff;
+}
+
+.menu__tabs-wrap {
+  margin-bottom: 30px;
+  padding-top: 30px;
+  border-bottom: 1px solid var(--grey-lighter);
+}
+
+.menu__tabs {
+  padding-inline: 30px;
+}
+
+.menu__tab:not(:last-child) {
+  margin-right: 40px;
+}
+
+
+.menu__tab-link {
+  position: relative;
+  display: block;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--dark-lighter);
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity var(--transition-duration-2);
+}
+
+.menu__tab-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background-color: var(--dark-lighter);
+  opacity: 0;
+  z-index: 1;
+  transition: opacity var(--transition-duration-2);
+}
+
+.menu__tab-link:hover,
+.menu__tab-link:hover::before {
+  opacity: 1;
+}
+
+.menu__tab-link.active {
+  opacity: 1;
+}
+
+.menu__contents {}
+
+.menu__content-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 35px;
+}
+
+.menu__content-item {}
+
+.menu-card {
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid var(--dark-lighter-01);
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.menu-card__img-wrap {
+  width: 258px;
+  height: 265px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.menu-card__img-wrap img {
+  object-fit: cover;
+}
+
+.menu-card__name {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--dark-lighter);
+}
+
+.menu-card__price {
+  margin-top: auto;
+  text-align: left;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--dark);
+}
+
+.menu-card__order {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.menu__content {}
+
+
+
+/* advantages  */
+.advantages {}
+
+.advantages__title {}
+
+.advantages__list {}
+
+.advantages__item {}
+
+.advantages__box {}
+
+.advantages__text {}
+
+
+
+/* about-us  */
+.about-us {}
+
+.contaner {}
+
+.about-us__block {}
+
+.about-us__title {}
+
+.about-us__descr {}
+
+
+
+/* delivery  */
+.delivery {}
+
+.delivery__left {}
+
+.delivery__right {}
+
+.delivery__title {}
+
+.delivery__descr {}
+
+.delivery__form {}
+
+.delivery-form {}
+
+.delivery-form__container {}
+
+.delivery-form__name {}
+
+.input-default {}
+
+.delivery-form__tel {}
+
+.delivery-form__date {}
+
+.delivery-form__guests {}
+
+.delivery-form__wishes {}
+
+.delivery-form__agreement {}
+
+.delivery-form__checkbox {}
+
+.delivery-form__checkbox-castom {}
+
+
+
+/* spec-offers  */
+.spec-offers {}
+
+.spec-offers__list {}
+
+.spec-offers__item {}
+
+.spec-offers__card {}
+
+.spec-offers__img-wrap {}
+
+.spec-offers__text {}
+
+.spec-offers__descr {}
+
+.spec-offers__price {}
+
+.spec-offers__offer {}
+
+
+
+/* gallery  */
+.gallery {}
+
+
+
+/* contacts  */
+.contacts {}
+
+.contacts__map {}
+
+.contacts__contacts-box {}
+
+.contacts__title {}
+
+.contacts__list {}
+
+.contacts__item {}
+
+.contacts__sotials {}
+
+.contacts__sotial {}
+
+
+
+/* footer  */
+.footer {}

@@ -13,33 +13,38 @@
   <!-- <script src="./src/scripts/init-map-yandex.js"></script> -->
   <script src="./src/scripts/init-swiper.js" defer></script>
   <script src="./src/scripts/handlers.js" defer></script>
-  <title>Юридическая фирма</title>
+  <title>Fast-Cool</title>
 </head>
 
 <body>
-  <div class="main-wrapper">
 
-    <div class="bg-fixed"></div>
+  <header class="header">
 
-    <header class="header">
+    <div class="container">
+      <div class="header__top items-center content-between">
 
-      <div class="header__top">
+        <div class="header__tel tel-info items-center">
+          <span class="tel-info__img items-center content-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                d="M5.8 3.7c1-1 2.7-1 3.7 0L10.7 5c1 1 1 2.7 0 3.7l-.5.5c0 .1 0 .3.2.5.4.7 1 1.5 2.2 2.7 1.1 1 2 1.8 2.6 2.1l.6.2.5-.5c1-1 2.7-1 3.7 0l1.2 1.2c1 1 1 2.7 0 3.7a30.3 30.3 0 0 1-1.9 2 4.2 4.2 0 0 1-3.7.2 8.7 8.7 0 0 1-.7-.3l.4-.9-.4 1c-1.8-1-4-2.5-6.3-4.8a26 26 0 0 1-4.6-6c-.4-.8-.8-1.6-.9-2.2V7c0-.2 0-.6.3-1l2.4-2.3zm10 15.4a4.7 4.7 0 0 0 1.2.4c.6 0 1-.1 1.3-.3l.3-.3a13.8 13.8 0 0 0 1.1-1.2h.1c.3-.3.3-.7 0-1l-1.2-1.1a.7.7 0 0 0-.9 0l-.6.5c-.4.5-1 .6-1.4.5-.5 0-1-.2-1.4-.4-.9-.5-2-1.3-3.1-2.5-1.2-1.2-2-2.2-2.5-3.1-.3-.4-.5-1-.5-1.4 0-.5 0-1 .5-1.4l.6-.6c.2-.3.2-.7 0-.9L8 5.1a.7.7 0 0 0-1 0L5 7.3v.3l.8 1.7a24 24 0 0 0 4.2 5.5c2.2 2.1 4.2 3.6 5.7 4.3z">
+              </path>
+            </svg>
+          </span>
 
-        <div class="header__tel tel-info">
-          <span class="tel-info__img"></span>
           <div class="tel-info__content">
             <span class="tel-info__text">
               ежедневно с 10:00 до 22:00
             </span>
-            <a href="tel:+71231234567" class="tel-info__tel">
+            <a class="tel-info__tel" href="tel:+71231234567">
               +7 (123) 123-45-67
             </a>
           </div>
         </div>
 
-        <div class="header__logo-block logo-block">
+        <div class="header__logo-block logo-block flex-col items-center">
           <div class="flex logo-block__img-wrap">
-            <img width="" height="" src="" alt="logo">
+            <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/Tceik-SeXBiRUF8Q2ykooQ/56c/d/logo.png" alt="logo">
           </div>
           <h1>
             Fast-Cool
@@ -55,7 +60,7 @@
 
       </div> <!-- header__top  -->
 
-      <nav class="header__bottom nav">
+      <nav class="header__bottom nav content-center">
         <ul class="nav__list items-center">
           <li class="nav__item">
             <a class="nav__link" href="#menu">
@@ -94,8 +99,9 @@
           </li>
         </ul>
       </nav> <!-- header__bottom  -->
+    </div>
 
-      <!-- <button class="header__burger-btn btn-reset" type="button">
+    <!-- <button class="header__burger-btn btn-reset" type="button">
       </button>
       <nav class="burger-menu">
         <ul class="burger-menu__list">
@@ -131,74 +137,388 @@
           </li>
         </ul>
       </nav> -->
-    </header>
+  </header>
 
-    <div class="bg-block-transparent"></div>
+  <div class="bg-fixed"></div>
+  <div class="bg-block-transparent"></div>
 
-    <main>
-      <section class="menu">
-        <h2 class="menu__tile">
-          Наше меню
+  <main>
+    <section class="menu">
+      <h2 class="menu__title">
+        Наше меню
+      </h2>
+
+
+      <div class="menu__tabs-wrap">
+        <ul class="menu__tabs items-center container">
+          <li class="menu__tab">
+            <span class="menu__tab-link" data-tab="tab-1">
+              Фастфуд
+            </span>
+          </li>
+          <li class="menu__tab">
+            <span class="menu__tab-link" data-tab="tab-2">
+              Закуски
+            </span>
+          </li>
+          <li class="menu__tab">
+            <span class="menu__tab-link" data-tab="tab-3">
+              Салаты
+            </span>
+          </li>
+          <li class="menu__tab">
+            <span class="menu__tab-link" data-tab="tab-4">
+              Десерты
+            </span>
+          </li>
+          <li class="menu__tab">
+            <span class="menu__tab-link" data-tab="tab-5">
+              Напитки
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu__contents container">
+
+        <ul class="menu__content-list" id="tab-1">
+
+          <li class="menu__content-item">
+
+            <div class="menu-card">
+
+              <div class="menu-card__img-wrap">
+                <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/6Fk1RKMaclOHntyykJQ2Gg/r/d/54814824_2.jpg"
+                  alt="steak-burger">
+              </div>
+
+              <div class="menu-card__name">
+                Стейк-бургер
+              </div>
+
+              <div class="menu-card__price">
+                560 ₽
+              </div>
+
+              <button class="menu-card__order btn-default" type="button">
+                Заказать
+              </button>
+
+            </div> <!-- menu-card__inner -->
+
+          </li>
+
+          <li class="menu__content-item">
+
+            <div class="menu-card">
+
+              <div class="menu-card__img-wrap">
+                <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/6Fk1RKMaclOHntyykJQ2Gg/r/d/54814824_2.jpg"
+                  alt="steak-burger">
+              </div>
+
+              <div class="menu-card__name">
+                Стейк-бургер
+              </div>
+
+              <div class="menu-card__price">
+                560 ₽
+              </div>
+
+              <button class="menu-card__order btn-default" type="button">
+                Заказать
+              </button>
+
+            </div> <!-- menu-card__inner -->
+
+          </li>
+
+          <li class="menu__content-item">
+
+            <div class="menu-card">
+
+              <div class="menu-card__img-wrap">
+                <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/6Fk1RKMaclOHntyykJQ2Gg/r/d/54814824_2.jpg"
+                  alt="steak-burger">
+              </div>
+
+              <div class="menu-card__name">
+                Стейк-бургер
+              </div>
+
+              <div class="menu-card__price">
+                560 ₽
+              </div>
+
+              <button class="menu-card__order btn-default" type="button">
+                Заказать
+              </button>
+
+            </div> <!-- menu-card__inner -->
+
+          </li>
+
+          <li class="menu__content-item">
+
+            <div class="menu-card">
+
+              <div class="menu-card__img-wrap">
+                <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/6Fk1RKMaclOHntyykJQ2Gg/r/d/54814824_2.jpg"
+                  alt="steak-burger">
+              </div>
+
+              <div class="menu-card__name">
+                Стейк-бургер
+              </div>
+
+              <div class="menu-card__price">
+                560 ₽
+              </div>
+
+              <button class="menu-card__order btn-default" type="button">
+                Заказать
+              </button>
+
+            </div> <!-- menu-card__inner -->
+
+          </li>
+
+        </ul>
+
+
+        <ul class="menu__content" id="tab-2">ttt2</ul>
+        <ul class="menu__content" id="tab-3">ttt3</ul>
+        <ul class="menu__content" id="tab-4">ttt4</ul>
+        <ul class="menu__content" id="tab-5">ttt5</ul>
+
+      </div> <!-- menu__contents -->
+
+    </section>
+
+
+    <section class="advantages">
+      <h2 class="advantages__title">
+        Наши преимущества
+      </h2>
+
+      <div class="container">
+
+        <ul class="advantages__list">
+
+          <li class="advantages__item">
+            <div class="advantages__box">
+              <div class="advantages__text">
+                <h3>
+                  Приходите на завтрак
+                </h3>
+                <p>
+                  Можно спокойно позавтракать с 8 утра, что редкость для большинства заведений
+                </p>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+      </div> <!-- container -->
+    </section>
+
+
+    <section class="about-us">
+      <div class="contaner">
+        <div class="about-us__block">
+          <h2 class="about-us__title">
+            О нас
+          </h2>
+          <p class="about-us__descr">
+            Наш ресторан в 1997 году открыл двери своим гостям в самом центре Москвы, он стал идеальным местом для
+            семейного отдыха, веселых встреч с друзьями, партнерами и коллегами.
+            ​​​​​​​
+            Мы используем как традиционные, так и необычные продукты, которые приятно удивят Вас своим великолепием.
+
+            Наш шеф-повар со своей командой каждый раз будет удивлять Вас новыми блюдами и дарить незабываемые
+            ощущения.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="delivery">
+
+      <div class="delivery__left">
+        <img src="./src/img/girl-with-burger.jpg" alt="girl with burger">
+      </div> <!-- delivery__left -->
+
+      <div class="delivery__right">
+
+        <h2 class="delivery__title">
+          Закажите доставку прямо сейчас
+        </h2>
+        <p class="delivery__descr">
+          Свяжемся с вами в ближайшее время
+        </p>
+
+        <form class="delivery__form delivery-form">
+
+          <div class="delivery-form__container">
+            <label class="delivery-form__name">
+              <span>
+                Имя
+              </span>
+              <input class="input-default" name="name" type="text">
+            </label>
+
+            <label class="delivery-form__tel">
+              <span>
+                Телефон
+              </span>
+              <input class="input-default" name="tel" type="tel">
+            </label>
+
+            <label class="delivery-form__date">
+              <span>
+                Выбор даты
+              </span>
+              <input class="input-default" name="date" type="text">
+            </label>
+
+            <label class="delivery-form__guests">
+              <span>
+                Гости
+              </span>
+              <input class="input-default" name="guests" type="text">
+            </label>
+
+            <label class="delivery-form__wishes">
+              <span>
+                Ваши пожелания
+              </span>
+              <textarea class="input-default" name="wishes" cols="30" rows="10"></textarea>
+            </label>
+
+            <button class="btn-default" type="submit">
+              Перезвоните мне
+            </button>
+          </div> <!-- delivery-form__container -->
+
+
+          <label class="delivery-form__agreement">
+            <input class="delivery-form__checkbox" type="checkbox" name="" id="">
+            <span class="delivery-form__checkbox-castom"></span>
+            <p>
+              Я согласен на обработку моих <a href="#">персональных данных</a>
+            </p>
+          </label>
+        </form>
+
+      </div> <!-- delivery__left -->
+    </section>
+
+
+    <section class="spec-offers">
+      <div class="container">
+
+        <ul class="spec-offers__list">
+
+          <li class="spec-offers__item">
+            <div class="spec-offers__card">
+              <div class="spec-offers__img-wrap">
+                <img src="./src/img/spec-offers-buc.jpg" alt="">
+              </div>
+
+              <div class="spec-offers__text">
+                <h3>
+                  Хрустящие баклажаны
+                </h3>
+                <p class="spec-offers__descr">
+                <ul>
+                  <li>
+                    Баклажаны 3 штуки
+                    ​</li>
+                  <li>
+                    Пшеничная мука 500 г
+                  </li>
+                  <li>
+                    Кукурузная мука 120 г
+                  </li>
+                  <li>
+                    ​Помидоры черри 3 штуки
+                  </li>
+                </ul>
+                </p>
+              </div>
+
+              <div class="spec-offers__price">
+                от 2 800 ₽
+              </div>
+
+              <button class="spec-offers__offer" type="button">
+                Заказать
+              </button>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+
+    <section class="gallery"></section>
+
+    <section class="contacts">
+
+      <div class="contacts__map"></div>
+
+      <address class="contacts__contacts-box">
+        <h2 class="contacts__title">
+          Контакты
         </h2>
 
-        <div class="container">
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <a href="tel:+80001111111">
+              8 000 111-11-11
+            </a>
+            <a href="mailto:login@domain.ru">
+              login@domain.ru
+            </a>
+          </li>
+          <li class="contacts__item">
+            <span>Режим работы:</span>
+            <span>C <b>11:00</b> до <b>21:00</b></span>
+            <span>без выходных</span>
+          </li>
+          <li class="contacts__item">
+            <span> г. Москва,</span>
+            ​​​​​​​​​​​​​​Ленинский проспект
+          </li>
 
-          <ul class="menu__tabs">
-            <li class="menu__tab" data-tab="tab-1">
-              Фастфуд
+          <ul class="contacts__sotials">
+            <li class="contacts__sotial">
+              <a href="https://vk.ru">
+                <svg>vk</svg>
+              </a>
             </li>
-            <li class="menu__tab" data-tab="tab-2">
-              Закуски
-            </li>
-            <li class="menu__tab" data-tab="tab-3">
-              Салаты
-            </li>
-            <li class="menu__tab" data-tab="tab-4">
-              Десерты
-            </li>
-            <li class="menu__tab" data-tab="tab-5">
-              Напитки
+            <li class="contacts__sotial">
+              <a href="https://od.ru">
+                <svg>od</svg>
+              </a>
             </li>
           </ul>
 
-          <div class="menu__contents">
-            <div class="menu__content menu-content" id="tab-1">
-              <ul class="menu-content__list">
-                <li class="menu-content__item menu-card">
-                  <div class="menu-card__inner">
-                    <div class="menu-card__img-wrap">
-                      <img src="./src/img/steak-burger.jpg" alt="steak-burger">
-                      <div class="menu-card__name">
-                        Стейк-бургер
-                      </div>
-                      <div class="menu-card__price">
-                        560 ₽
-                      </div>
-                      <button class="menu-card__order" type="button">
-                        Заказать
-                      </button>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
+        </ul>
+      </address>
 
-            <div class="menu__content" id="tab-2">ttt2</div>
-            <div class="menu__content" id="tab-3">ttt3</div>
-            <div class="menu__content" id="tab-4">ttt4</div>
-            <div class="menu__content" id="tab-5">ttt5</div>
-          </div>
+    </section>
 
-        </div>
-      </section>
+  </main>
 
-    </main>
-
-    <footer class="footer">
+  <footer class="footer">
 
 
-    </footer>
-  </div>
+  </footer>
 
 </body>
 

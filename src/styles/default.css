@@ -6,8 +6,8 @@
 }
 
 .container {
-  max-width: calc(var(--container-width) + var(--padding-x)*2);
-  padding-inline: var(--padding-x);
+  max-width: calc(var(--container-width) + var(--container-padding-x)*2);
+  padding-inline: var(--container-padding-x);
   margin-inline: auto;
 }
 
@@ -68,12 +68,12 @@
 }
 
 
-/* flex   */
+/* flex    */
 .flex {
   display: flex;
 }
 
-/* .flex-wrap {
+.flex-wrap {
   display: flex;
   flex-wrap: wrap;
 }
@@ -111,4 +111,4 @@
 .content-end {
   display: flex;
   justify-content: flex-end;
-} */
+}

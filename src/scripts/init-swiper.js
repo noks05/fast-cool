@@ -1,16 +1,11 @@
 (() => {
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.swiper-gallery', {
+    slidesPerView: 'auto',
     loop: true,
     speed: 400,
-    spaceBetween: 100,
-
-    pagination: {
-      el: '.swiper-pagination',
-    },
-
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+    spaceBetween: 5,
+    autoplay: {
+      delay: 5000
+    }
   });
 })()

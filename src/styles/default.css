@@ -23,6 +23,16 @@ section {
   color: var(--dark-lighter);
 }
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 
 /* link, button, input  */
 .input-default {
@@ -40,12 +50,8 @@ section {
 
 .input-default:focus {
   outline: none;
-  background-color: linear-gradient(0deg, var(--red-01), var(--red-01)), #fff;
+  background-color: var(--red-01);
   border-color: var(--red-01);
-}
-
-.checkbox-custom input[type="checkbox"] {
-  display: none;
 }
 
 .checkbox-custom span {
@@ -55,6 +61,7 @@ section {
   height: 22px;
   border-radius: 2px;
   border: 1px solid var(--dark-lighter-01);
+  transition: background-color var(--transition-duration-2);
   overflow: hidden;
   cursor: pointer;
 }
@@ -71,17 +78,24 @@ section {
   transition: transform var(--transition-duration-2);
 }
 
+.checkbox-custom input[type="checkbox"]:focus+span {
+  background-color: var(--red-01);
+}
+
 .checkbox-custom input[type="checkbox"]:checked+span::before {
   transform: scale(1);
 }
 
+.checkbox-custom:hover span {
+  background-color: var(--red-01);
+}
+
 .btn-default {
   height: fit-content;
-  padding: 18px 16px;
+  padding: 16px 30px;
   border-radius: 50px;
-  font-size: 16px;
   text-align: center;
-  text-align-last: center;
+  font-size: 16px;
   font-weight: 500;
   line-height: 100%;
   box-shadow: 0 5px 15px 0 var(--red-05);

@@ -8,11 +8,12 @@
   <link rel="stylesheet" href="./src/styles/media.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- <script src="//api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"
-    type="text/javascript"></script> -->
-  <!-- <script src="./src/scripts/init-map-yandex.js"></script> -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=286ea9a9-390c-46e4-9292-b3b654cb53c6&lang=ru_RU"
+    type="text/javascript"></script>
+  <script src="./src/scripts/init-map-yandex.js"></script>
   <script src="./src/scripts/init-swiper.js" defer></script>
   <script src="./src/scripts/handlers.js" defer></script>
+  <script src="./src/scripts/menu-tabs.js" defer></script>
   <title>Fast-Cool</title>
 </head>
 
@@ -20,86 +21,124 @@
 
   <header class="header">
 
-    <div class="container">
-      <div class="header__top items-center content-between">
+    <div class="container header__container items-center content-between">
 
-        <div class="header__tel tel-info items-center">
-          <span class="tel-info__img items-center content-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path
-                d="M5.8 3.7c1-1 2.7-1 3.7 0L10.7 5c1 1 1 2.7 0 3.7l-.5.5c0 .1 0 .3.2.5.4.7 1 1.5 2.2 2.7 1.1 1 2 1.8 2.6 2.1l.6.2.5-.5c1-1 2.7-1 3.7 0l1.2 1.2c1 1 1 2.7 0 3.7a30.3 30.3 0 0 1-1.9 2 4.2 4.2 0 0 1-3.7.2 8.7 8.7 0 0 1-.7-.3l.4-.9-.4 1c-1.8-1-4-2.5-6.3-4.8a26 26 0 0 1-4.6-6c-.4-.8-.8-1.6-.9-2.2V7c0-.2 0-.6.3-1l2.4-2.3zm10 15.4a4.7 4.7 0 0 0 1.2.4c.6 0 1-.1 1.3-.3l.3-.3a13.8 13.8 0 0 0 1.1-1.2h.1c.3-.3.3-.7 0-1l-1.2-1.1a.7.7 0 0 0-.9 0l-.6.5c-.4.5-1 .6-1.4.5-.5 0-1-.2-1.4-.4-.9-.5-2-1.3-3.1-2.5-1.2-1.2-2-2.2-2.5-3.1-.3-.4-.5-1-.5-1.4 0-.5 0-1 .5-1.4l.6-.6c.2-.3.2-.7 0-.9L8 5.1a.7.7 0 0 0-1 0L5 7.3v.3l.8 1.7a24 24 0 0 0 4.2 5.5c2.2 2.1 4.2 3.6 5.7 4.3z">
-              </path>
-            </svg>
+      <div class="header__tel tel-info items-center">
+        <span class="tel-info__img items-center content-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path
+              d="M5.8 3.7c1-1 2.7-1 3.7 0L10.7 5c1 1 1 2.7 0 3.7l-.5.5c0 .1 0 .3.2.5.4.7 1 1.5 2.2 2.7 1.1 1 2 1.8 2.6 2.1l.6.2.5-.5c1-1 2.7-1 3.7 0l1.2 1.2c1 1 1 2.7 0 3.7a30.3 30.3 0 0 1-1.9 2 4.2 4.2 0 0 1-3.7.2 8.7 8.7 0 0 1-.7-.3l.4-.9-.4 1c-1.8-1-4-2.5-6.3-4.8a26 26 0 0 1-4.6-6c-.4-.8-.8-1.6-.9-2.2V7c0-.2 0-.6.3-1l2.4-2.3zm10 15.4a4.7 4.7 0 0 0 1.2.4c.6 0 1-.1 1.3-.3l.3-.3a13.8 13.8 0 0 0 1.1-1.2h.1c.3-.3.3-.7 0-1l-1.2-1.1a.7.7 0 0 0-.9 0l-.6.5c-.4.5-1 .6-1.4.5-.5 0-1-.2-1.4-.4-.9-.5-2-1.3-3.1-2.5-1.2-1.2-2-2.2-2.5-3.1-.3-.4-.5-1-.5-1.4 0-.5 0-1 .5-1.4l.6-.6c.2-.3.2-.7 0-.9L8 5.1a.7.7 0 0 0-1 0L5 7.3v.3l.8 1.7a24 24 0 0 0 4.2 5.5c2.2 2.1 4.2 3.6 5.7 4.3z">
+            </path>
+          </svg>
+        </span>
+
+        <div class="tel-info__content">
+          <span class="tel-info__text">
+            ежедневно с 10:00 до 22:00
           </span>
-
-          <div class="tel-info__content">
-            <span class="tel-info__text">
-              ежедневно с 10:00 до 22:00
-            </span>
-            <a class="tel-info__tel" href="tel:+71231234567">
-              +7 (123) 123-45-67
-            </a>
-          </div>
+          <a class="tel-info__tel" href="tel:+71231234567">
+            +7 (123) 123-45-67
+          </a>
         </div>
+      </div>
 
-        <div class="header__logo-block logo-block flex-col items-center">
-          <div class="flex logo-block__img-wrap">
-            <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/Tceik-SeXBiRUF8Q2ykooQ/56c/d/logo.png" alt="logo">
-          </div>
-          <h1>
-            Fast-Cool
-          </h1>
-          <span>
-            Фастфуд
-          </span>
+      <div class="header__logo-block logo-block flex-col items-center">
+        <div class="flex logo-block__img-wrap">
+          <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/Tceik-SeXBiRUF8Q2ykooQ/56c/d/logo.png" alt="logo">
         </div>
+        <h1>
+          Fast-Cool
+        </h1>
+        <span>
+          Фастфуд
+        </span>
+      </div>
 
-        <button class="btn-default header__order-tel" type="button">
-          Заказать звонок
-        </button>
+      <button class="btn-default header__order-tel" type="button">
+        Заказать звонок
+      </button>
 
-      </div> <!-- header__top  -->
+    </div> <!-- header__container  -->
 
-      <nav class="header__bottom nav content-center">
-        <ul class="nav__list items-center">
-          <li class="nav__item">
-            <a class="nav__link" href="#menu">
-              Меню
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Преимущества
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              О нас
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Заказать доставку
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Спецпредложения
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              Галерея
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#contacts">
-              Контакты
-            </a>
-          </li>
-        </ul>
-      </nav> <!-- header__bottom  -->
-    </div>
+    <nav class="nav nav-main content-center">
+      <ul class="nav__list items-center">
+        <li class="nav__item">
+          <a class="nav__link" href="#menu">
+            Меню
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#advantages">
+            Преимущества
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#about-us">
+            О нас
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#delivery">
+            Заказать доставку
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#spec-offers">
+            Спецпредложения
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#gallery">
+            Галерея
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#contacts">
+            Контакты
+          </a>
+        </li>
+      </ul>
+    </nav> <!-- nav  -->
+
+    <nav class="nav nav-fixed content-center">
+      <ul class="nav__list items-center">
+        <li class="nav__item">
+          <a class="nav__link" href="#menu">
+            Меню
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#advantages">
+            Преимущества
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#about-us">
+            О нас
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#delivery">
+            Заказать доставку
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#spec-offers">
+            Спецпредложения
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#gallery">
+            Галерея
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#contacts">
+            Контакты
+          </a>
+        </li>
+      </ul>
+    </nav> <!-- nav-fixed  -->
 
     <!-- <button class="header__burger-btn btn-reset" type="button">
       </button>
@@ -143,7 +182,7 @@
   <div class="bg-block-transparent"></div>
 
   <main>
-    <section class="menu">
+    <section class="menu" id="menu">
       <h2 class="menu__title section-title">
         Наше меню
       </h2>
@@ -152,29 +191,29 @@
       <div class="menu__tabs-wrap">
         <ul class="menu__tabs items-center container">
           <li class="menu__tab">
-            <span class="menu__tab-link" data-tab="tab-1">
+            <button class="menu__tab-btn" type="button" data-tab="tab-1">
               Фастфуд
-            </span>
+            </button>
           </li>
           <li class="menu__tab">
-            <span class="menu__tab-link" data-tab="tab-2">
+            <button class="menu__tab-btn" type="button" data-tab="tab-2">
               Закуски
-            </span>
+            </button>
           </li>
           <li class="menu__tab">
-            <span class="menu__tab-link" data-tab="tab-3">
+            <button class="menu__tab-btn" type="button" data-tab="tab-3">
               Салаты
-            </span>
+            </button>
           </li>
           <li class="menu__tab">
-            <span class="menu__tab-link" data-tab="tab-4">
+            <button class="menu__tab-btn" type="button" data-tab="tab-4">
               Десерты
-            </span>
+            </button>
           </li>
           <li class="menu__tab">
-            <span class="menu__tab-link" data-tab="tab-5">
+            <button class="menu__tab-btn" type="button" data-tab="tab-5">
               Напитки
-            </span>
+            </button>
           </li>
         </ul>
       </div>
@@ -286,17 +325,17 @@
         </ul>
 
 
-        <ul class="menu__content" id="tab-2">ttt2</ul>
-        <ul class="menu__content" id="tab-3">ttt3</ul>
-        <ul class="menu__content" id="tab-4">ttt4</ul>
-        <ul class="menu__content" id="tab-5">ttt5</ul>
+        <ul class="menu__content-list" id="tab-2">ttt2</ul>
+        <ul class="menu__content-list" id="tab-3">ttt3</ul>
+        <ul class="menu__content-list" id="tab-4">ttt4</ul>
+        <ul class="menu__content-list" id="tab-5">ttt5</ul>
 
       </div> <!-- menu__contents -->
 
     </section>
 
 
-    <section class="advantages">
+    <section class="advantages" id="advantages">
       <h2 class="advantages__title section-title">
         Наши преимущества
       </h2>
@@ -356,7 +395,7 @@
     </section>
 
 
-    <section class="about-us">
+    <section class="about-us" id="about-us">
       <div class="container about-us__container">
 
         <div class="about-us__block">
@@ -383,7 +422,7 @@
     </section>
 
 
-    <section class="delivery flex">
+    <section class="delivery flex" id="delivery">
 
       <div class="delivery__left">
         <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/HjJ71wE8frK4KeVohkWSCw/r/d/55.jpg" alt="girl with burger">
@@ -448,7 +487,7 @@
 
             <label class="delivery-form__agreement items-start">
               <label class="checkbox-custom delivery-form__checkbox flex">
-                <input type="checkbox" name="agreement">
+                <input class="visually-hidden" type="checkbox" name="agreement">
                 <span></span>
               </label>
               <p>
@@ -464,7 +503,7 @@
     </section>
 
 
-    <section class="spec-offers">
+    <section class="spec-offers" id="spec-offers">
       <div class="container">
 
         <h2 class="spec-offers__title section-title">
@@ -590,11 +629,37 @@
     </section>
 
 
-    <section class="gallery">gallery</section>
+    <section class="gallery" id="gallery">
 
-    <section class="contacts">
+      <div class="swiper swiper-gallery">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide _odd">
+            <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/X4wK4Yb_o-ttNTFu1R67gQ/r600/d/55219703_2.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/JPS28H0cuEi5VEZlyLUkyQ/r600/d/55194588_2.jpg
+            " alt="">
+          </div>
+          <div class="swiper-slide _odd">
+            <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/yhp6vNNKSgpvPaMFm_DA2Q/r600/d/55194602_2.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/lWDIwYSV92CTk1lTsCGNrg/r600/d/55049657_2.jpg
+            " alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/tLpR5E1SBL8tX699OTHkrw/r600/d/55185123_2.jpg
+            " alt="">
+          </div>
+        </div>
+      </div>
 
-      <div class="contacts__map"></div>
+
+    </section>
+
+    <section class="contacts" id="contacts">
+
+      <div class="contacts__map" id="map"></div>
 
       <address class="contacts__contacts-box">
         <h2 class="contacts__title section-title">
@@ -616,8 +681,8 @@
             <span>без выходных</span>
           </li>
           <li class="contacts__item">
-            <span> г. Москва,</span>
-            ​​​​​​​​​​​​​<span>​Ленинский проспект</span>
+            <span>г. Москва,</span>
+            <span>​Ленинский проспект</span>
           </li>
 
         </ul> <!-- contacts__list  -->
@@ -625,7 +690,7 @@
         <ul class="contacts__socials">
           <li>
             <a class="contacts__link flex" href="https://vk.ru">
-              <svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              <svg width="30px" height="30px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink">
                 <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
                 <title>VK</title>
@@ -650,8 +715,8 @@
             </a>
           </li>
           <li>
-            <a class="contacts__link flex" href="https://od.ru">
-              <svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            <a class="contacts__link flex" href="https://ok.ru">
+              <svg width="30px" height="30px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink">
                 <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
                 <title>OK</title>

@@ -49,6 +49,7 @@
 
 :root {
   --dark: #000;
+  --dark-06: rgba(0, 0, 0, .6);
   --dark-light: #222;
   --dark-lighter: #444;
   --dark-lighter-07: rgba(68, 68, 68, 0.7);
@@ -72,6 +73,10 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html, body {

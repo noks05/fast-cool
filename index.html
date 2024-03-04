@@ -12,12 +12,62 @@
     type="text/javascript"></script>
   <script src="./src/scripts/init-map-yandex.js"></script>
   <script src="./src/scripts/init-swiper.js" defer></script>
+  <script src="./src/scripts/burger-menu.js" defer></script>
   <script src="./src/scripts/handlers.js" defer></script>
   <script src="./src/scripts/menu-tabs.js" defer></script>
   <title>Fast-Cool</title>
 </head>
 
 <body>
+
+  <nav class="burger-menu">
+    <div class="burger-menu__box">
+      <button class="nav__burger-btn nav__burger-btn-close btn-default" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 21 21">
+          <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+            d="m15.5 15.5l-10-10zm0-10l-10 10" />
+        </svg>
+      </button>
+
+      <ul class="burger-menu__list flex-col">
+        <li class="burger-menu__item">
+          <a class="burger-menu__link nav-link" href="#menu">
+            Меню
+          </a>
+        </li>
+        <li class="burger-menu__item">
+          <a class="burger-menu__link nav-link" href="#advantages">
+            Преимущества
+          </a>
+        </li>
+        <li class="burger-menu__item">
+          <a class="burger-menu__link nav-link" href="#about-us">
+            О нас
+          </a>
+        </li>
+        <li class="burger-menu__item">
+          <a class="burger-menu__link nav-link" href="#delivery">
+            Заказать доставку
+          </a>
+        </li>
+        <li class="burger-menu__item">
+          <a class="burger-menu__link nav-link" href="#spec-offers">
+            Спецпредложения
+          </a>
+        </li>
+        <li class="burger-menu__item">
+          <a class="burger-menu__link nav-link" href="#gallery">
+            Галерея
+          </a>
+        </li>
+        <li class="burger-menu__item">
+          <a class="burger-menu__link nav-link" href="#contacts">
+            Контакты
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
   <header class="header">
 
@@ -63,119 +113,96 @@
     <nav class="nav nav-main content-center">
       <ul class="nav__list items-center">
         <li class="nav__item">
-          <a class="nav__link" href="#menu">
+          <a class="nav-link" href="#menu">
             Меню
           </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#advantages">
+          <a class="nav-link" href="#advantages">
             Преимущества
           </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#about-us">
+          <a class="nav-link" href="#about-us">
             О нас
           </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#delivery">
+          <a class="nav-link" href="#delivery">
             Заказать доставку
           </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#spec-offers">
+          <a class="nav-link" href="#spec-offers">
             Спецпредложения
           </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#gallery">
+          <a class="nav-link" href="#gallery">
             Галерея
           </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#contacts">
+          <a class="nav-link" href="#contacts">
             Контакты
           </a>
         </li>
       </ul>
+
+      <button class="nav__burger-btn nav__burger-btn-active btn-default" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24">
+          <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round"
+            d="M3 6.001h18m-18 6h18m-18 6h18" />
+        </svg>
+      </button>
     </nav> <!-- nav  -->
 
     <nav class="nav nav-fixed content-center">
       <ul class="nav__list items-center">
         <li class="nav__item">
-          <a class="nav__link" href="#menu">
+          <a class="nav-link" href="#menu">
             Меню
           </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#advantages">
+          <a class="nav-link" href="#advantages">
             Преимущества
           </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#about-us">
+          <a class="nav-link" href="#about-us">
             О нас
           </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#delivery">
+          <a class="nav-link" href="#delivery">
             Заказать доставку
           </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#spec-offers">
+          <a class="nav-link" href="#spec-offers">
             Спецпредложения
           </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#gallery">
+          <a class="nav-link" href="#gallery">
             Галерея
           </a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#contacts">
+          <a class="nav-link" href="#contacts">
             Контакты
           </a>
         </li>
       </ul>
-    </nav> <!-- nav-fixed  -->
 
-    <!-- <button class="header__burger-btn btn-reset" type="button">
+      <button class="nav__burger-btn nav__burger-btn-active btn-default" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24">
+          <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round"
+            d="M3 6.001h18m-18 6h18m-18 6h18" />
+        </svg>
       </button>
-      <nav class="burger-menu">
-        <ul class="burger-menu__list">
-          <li class="burger-menu__item">
-            <a class="burger-menu__link" href="#">
-              Главная
-            </a>
-          </li>
-          <li class="burger-menu__item">
-            <a class="burger-menu__link" href="#">
-              Услуги
-            </a>
-          </li>
-          <li class="burger-menu__item">
-            <a class="burger-menu__link" href="#">
-              Сопровождение
-            </a>
-          </li>
-          <li class="burger-menu__item">
-            <a class="burger-menu__link" href="#">
-              Полезное
-            </a>
-          </li>
-          <li class="burger-menu__item">
-            <a class="burger-menu__link" href="#">
-              О компании
-            </a>
-          </li>
-          <li class="burger-menu__item">
-            <a class="burger-menu__link" href="#">
-              Контакты
-            </a>
-          </li>
-        </ul>
-      </nav> -->
+    </nav> <!-- nav-fixed  -->
   </header>
 
   <div class="bg-fixed"></div>
@@ -654,7 +681,38 @@
         </div>
       </div>
 
+      <div class="swiper swiper-modal-gallery">
+        <button class="swiper-modal-gallery__btn-close" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 21 21">
+            <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+              d="m15.5 15.5l-10-10zm0-10l-10 10" />
+          </svg>
+        </button>
 
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/X4wK4Yb_o-ttNTFu1R67gQ/r600/d/55219703_2.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/JPS28H0cuEi5VEZlyLUkyQ/r600/d/55194588_2.jpg
+            " alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/yhp6vNNKSgpvPaMFm_DA2Q/r600/d/55194602_2.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/lWDIwYSV92CTk1lTsCGNrg/r600/d/55049657_2.jpg
+            " alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/tLpR5E1SBL8tX699OTHkrw/r600/d/55185123_2.jpg
+            " alt="">
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
     </section>
 
     <section class="contacts" id="contacts">

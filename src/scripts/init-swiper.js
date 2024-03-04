@@ -14,6 +14,7 @@
   const swiperModalGallery = new Swiper('.swiper-modal-gallery', {
     loop: true,
     speed: 600,
+    grabCursor: true,
     pagination: {
       el: ".swiper-pagination",
       type: "fraction",
@@ -31,7 +32,7 @@
     indexSlide = numSlide && numSlide - 1
 
     modalGallery.classList.add('active')
-    swiperModalGallery.slideTo(indexSlide)
+    swiperModalGallery.slideTo(indexSlide, 1000, false)
   }
 
   modalGallery.addEventListener('click', (e) => {

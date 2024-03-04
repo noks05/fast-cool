@@ -12,6 +12,7 @@
     type="text/javascript"></script>
   <script src="./src/scripts/init-map-yandex.js"></script>
   <script src="./src/scripts/init-swiper.js" defer></script>
+  <script src="./src/scripts/modal.js" defer></script>
   <script src="./src/scripts/burger-menu.js" defer></script>
   <script src="./src/scripts/handlers.js" defer></script>
   <script src="./src/scripts/menu-tabs.js" defer></script>
@@ -104,7 +105,7 @@
         </span>
       </div>
 
-      <button class="btn-default header__order-tel" type="button">
+      <button class="btn-default header__order-tel" data-role="btn-active-modal" id="offer-call" type="button">
         Заказать звонок
       </button>
 
@@ -266,7 +267,7 @@
                 560 ₽
               </div>
 
-              <button class="menu-card__order btn-default" type="button">
+              <button class="menu-card__order btn-default" data-role="btn-active-modal" id="offer-eat" type="button">
                 Заказать
               </button>
 
@@ -291,7 +292,7 @@
                 560 ₽
               </div>
 
-              <button class="menu-card__order btn-default" type="button">
+              <button class="menu-card__order btn-default" data-role="btn-active-modal" id="offer-eat" type="button">
                 Заказать
               </button>
 
@@ -316,7 +317,7 @@
                 560 ₽
               </div>
 
-              <button class="menu-card__order btn-default" type="button">
+              <button class="menu-card__order btn-default" data-role="btn-active-modal" id="offer-eat" type="button">
                 Заказать
               </button>
 
@@ -341,7 +342,7 @@
                 560 ₽
               </div>
 
-              <button class="menu-card__order btn-default" type="button">
+              <button class="menu-card__order btn-default" data-role="btn-active-modal" id="offer-eat" type="button">
                 Заказать
               </button>
 
@@ -469,38 +470,38 @@
 
             <div class="delivery-form__container">
               <label class="delivery-form__name">
-                <span class="delivery-form__label">
-                  <span class="delivery-form__star">*</span>
+                <span class="input-default-label">
+                  <span class="input-require-star">*</span>
                   Имя
                 </span>
                 <input class="input-default" name="name" type="text">
               </label>
 
               <label class="delivery-form__tel">
-                <span class="delivery-form__label">
-                  <span class="delivery-form__star">*</span>
+                <span class="input-default-label">
+                  <span class="input-require-star">*</span>
                   Телефон
                 </span>
                 <input class="input-default" name="tel" type="tel">
               </label>
 
               <label class="delivery-form__date">
-                <span class="delivery-form__label">
-                  <span class="delivery-form__star">*</span>
+                <span class="input-default-label">
+                  <span class="input-require-star">*</span>
                   Выбор даты
                 </span>
                 <input class="input-default" name="date" type="text">
               </label>
 
               <label class="delivery-form__guests">
-                <span class="delivery-form__label">
+                <span class="input-default-label">
                   Гости
                 </span>
                 <input class="input-default" name="guests" type="text">
               </label>
 
               <label class="delivery-form__wishes">
-                <span class="delivery-form__label">
+                <span class="input-default-label">
                   Ваши пожелания
                 </span>
                 <textarea class="input-default" name="wishes" cols="30" rows="10"></textarea>
@@ -512,13 +513,13 @@
             </div> <!-- delivery-form__container -->
 
 
-            <label class="delivery-form__agreement items-start">
-              <label class="checkbox-custom delivery-form__checkbox flex">
+            <label class="form-agreement-default items-start">
+              <label class="checkbox-custom flex">
                 <input class="visually-hidden" type="checkbox" name="agreement">
                 <span></span>
               </label>
               <p>
-                <span class="delivery-form__star">*</span>
+                <span class="input-require-star">*</span>
                 Я согласен на обработку моих <a href="#">персональных
                   данных</a>
               </p>
@@ -810,6 +811,127 @@
 
 
   </footer>
+
+  <div class="modal">
+    <div class="modal__wrapper">
+      <div class="modal__box">
+        <button class="modal__close" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 21 21">
+            <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+              d="m15.5 15.5l-10-10zm0-10l-10 10"></path>
+          </svg>
+        </button>
+
+        <div class="content-offer-call modal__content">
+          <div class="modal__title">
+            Заказать звонок
+          </div>
+          <div class="modal__descr">
+            Введите данные для заказа обратного звонка
+          </div>
+
+          <form class="content-offer-call__form">
+
+            <label class="input-default-wrapper">
+              <span class="input-default-label">
+                <span class="input-require-star">*</span>
+                Имя
+              </span>
+              <input class="input-default" name="name" type="text">
+            </label>
+
+            <label class="input-default-wrapper">
+              <span class="input-default-label">
+                <span class="input-require-star">*</span>
+                Телефон
+              </span>
+              <input class="input-default" name="tel" type="tel">
+            </label>
+
+            <label class="form-agreement-default items-start">
+              <label class="checkbox-custom flex">
+                <input class="visually-hidden" type="checkbox" name="agreement">
+                <span></span>
+              </label>
+              <p>
+                <span class="input-require-star">
+                  *
+                </span>
+                Я согласен на обработку моих
+                <a href="#">
+                  персональных данных
+                </a>
+              </p>
+            </label>
+
+            <button class="btn-default modal__ok" type="submit">
+              Заказать
+            </button>
+
+          </form>
+
+        </div> <!--content-offer-call -->
+
+        <div class="content-offer-eat modal__content">
+          <div class="content-offer-eat__left">
+            <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/kKi9BGhesNJxgTuG27HuDQ/800c1000/d/55219694_2.jpg"
+              alt="">
+          </div>
+
+          <div class="content-offer-eat__right">
+            <div class="modal__title">
+              Заказать
+            </div>
+            <div class="modal__descr">
+              Введите данные для заказа
+            </div>
+
+            <form>
+
+              <label class="input-default-wrapper">
+                <span class="input-default-label">
+                  <span class="input-require-star">*</span>
+                  Имя
+                </span>
+                <input class="input-default" name="name" type="text">
+              </label>
+
+              <label class="input-default-wrapper">
+                <span class="input-default-label">
+                  <span class="input-require-star">*</span>
+                  Телефон
+                </span>
+                <input class="input-default" name="tel" type="tel">
+              </label>
+
+              <label class="form-agreement-default items-start">
+                <label class="checkbox-custom flex">
+                  <input class="visually-hidden" type="checkbox" name="agreement">
+                  <span></span>
+                </label>
+                <p>
+                  <span class="input-require-star">
+                    *
+                  </span>
+                  Я согласен на обработку моих
+                  <a href="#">
+                    персональных данных
+                  </a>
+                </p>
+              </label>
+
+              <button class="btn-default modal__ok" type="submit">
+                Заказать
+              </button>
+
+            </form>
+          </div>
+
+        </div> <!--content-offer-eat -->
+
+      </div>
+    </div>
+  </div>
 
 </body>
 

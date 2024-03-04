@@ -1,3 +1,4 @@
+/* *******************  fade  ************************ */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -9,7 +10,7 @@
 }
 
 .fadeIn {
-  animation: fadeIn .1s ease-in-out forwards;
+  animation: fadeIn .2s ease-in-out forwards;
 }
 
 @keyframes fadeOut {
@@ -23,7 +24,7 @@
 }
 
 .fadeOut {
-  animation: fadeOut .3s ease-in-out forwards;
+  animation: fadeOut .2s ease-in-out forwards;
 }
 
 
@@ -93,4 +94,35 @@
 
 .fadeOutRight {
   animation: fadeOutRight .5s ease-in-out forwards;
+}
+
+
+
+/* *******************  scale  ************************ */
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.scaleIn {
+  animation: scaleIn .2s ease-in-out forwards;
+}
+
+@keyframes scaleOut {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+.scaleOut {
+  animation: scaleOut .2s ease-in-out forwards;
 }

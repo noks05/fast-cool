@@ -54,6 +54,26 @@ section {
   border-color: var(--red-01);
 }
 
+.input-default-wrapper {
+  display: block;
+}
+
+.input-require-star {
+  color: var(--red);
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.input-default-label {
+  display: inline-block;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 100%;
+  color: var(--dark-lighter);
+}
+
 .checkbox-custom span {
   position: relative;
   display: inline-block;
@@ -88,6 +108,27 @@ section {
 
 .checkbox-custom:hover span {
   background-color: var(--red-01);
+}
+
+.form-agreement-default {
+  cursor: pointer;
+}
+
+.form-agreement-default p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 150%;
+  color: var(--dark-lighter);
+  transition: color var(--transition-duration-2);
+}
+
+.form-agreement-default a {
+  text-decoration: underline;
+  color: var(--red);
+}
+
+.form-agreement-default .checkbox-custom {
+  margin-right: 8px;
 }
 
 .btn-default {

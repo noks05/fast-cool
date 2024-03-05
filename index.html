@@ -4,18 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/styles/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./src/styles/main.css">
   <link rel="stylesheet" href="./src/styles/media.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="./src/styles/air-datepicker.css">
+  <script src="./src/libs/air-datepicker.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=286ea9a9-390c-46e4-9292-b3b654cb53c6&lang=ru_RU"
     type="text/javascript"></script>
   <script src="./src/scripts/init-map-yandex.js"></script>
+  <script src="./src/libs/swiper-bundle.min.js"></script>
   <script src="./src/scripts/init-swiper.js" defer></script>
+  <script src="./src/libs/inputmask.min.js" defer></script>
+  <script src="./src/libs/just-validate.production.min.js" defer></script>
   <script src="./src/scripts/modal.js" defer></script>
   <script src="./src/scripts/burger-menu.js" defer></script>
   <script src="./src/scripts/handlers.js" defer></script>
   <script src="./src/scripts/menu-tabs.js" defer></script>
+  <script src="./src/scripts/init-plugins.js" type="module" defer></script>
   <title>Fast-Cool</title>
 </head>
 
@@ -466,7 +471,7 @@
             Свяжемся с вами в ближайшее время
           </p>
 
-          <form class="delivery__form delivery-form">
+          <form class="delivery__form delivery-form" id="delivery-form" name="deliveryForm" method="POST">
 
             <div class="delivery-form__container">
               <label class="delivery-form__name">
@@ -490,7 +495,16 @@
                   <span class="input-require-star">*</span>
                   Выбор даты
                 </span>
-                <input class="input-default" name="date" type="text">
+                <div class="delivery-form__input-wrap">
+                  <input class="input-default" id="form-calendar" name="date" type="text">
+
+                  <svg class="lp-form-tpl__field-calendar--ico" width="24" height="24" fill="#222"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8 4V3a1 1 0 0 0-2 0v1H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V3a1 1 0 1 0-2 0v1h-3V3a1 1 0 1 0-2 0v1H8zm8 2h-3a1 1 0 1 1-2 0H8a1 1 0 0 1-2 0H4v2h16V6h-2a1 1 0 1 1-2 0zm4 4v9H4v-9h16z">
+                    </path>
+                  </svg>
+                </div>
               </label>
 
               <label class="delivery-form__guests">
@@ -504,25 +518,27 @@
                 <span class="input-default-label">
                   Ваши пожелания
                 </span>
-                <textarea class="input-default" name="wishes" cols="30" rows="10"></textarea>
+                <textarea class="input-default" name="wishes"></textarea>
               </label>
 
-              <button class="delivery-form__submit btn-default" type="submit">
+              <button class="delivery-form__submit btn-default" type="submit" onclick="(e)=> e.preventDefault()">
                 Перезвоните мне
               </button>
             </div> <!-- delivery-form__container -->
 
 
-            <label class="form-agreement-default items-start">
-              <label class="checkbox-custom flex">
+            <label class="form-agreement-default">
+              <label class="checkbox-custom items-start">
                 <input class="visually-hidden" type="checkbox" name="agreement">
-                <span></span>
+                <span class="checkbox-custom__label"></span>
+                <p>
+                  <span class="input-require-star">*</span>
+                  Я согласен на обработку моих
+                  <a href="#">
+                    персональных данных
+                  </a>
+                </p>
               </label>
-              <p>
-                <span class="input-require-star">*</span>
-                Я согласен на обработку моих <a href="#">персональных
-                  данных</a>
-              </p>
             </label>
           </form>
         </div>
@@ -830,7 +846,7 @@
             Введите данные для заказа обратного звонка
           </div>
 
-          <form class="content-offer-call__form">
+          <form class="content-offer-call__form" id="offer-call-form" name="offerCallForm" method="POST">
 
             <label class="input-default-wrapper">
               <span class="input-default-label">
@@ -848,20 +864,18 @@
               <input class="input-default" name="tel" type="tel">
             </label>
 
-            <label class="form-agreement-default items-start">
-              <label class="checkbox-custom flex">
+            <label class="form-agreement-default">
+              <label class="checkbox-custom items-start">
                 <input class="visually-hidden" type="checkbox" name="agreement">
-                <span></span>
+                <span class="checkbox-custom__label"></span>
+                <p>
+                  <span class="input-require-star">*</span>
+                  Я согласен на обработку моих
+                  <a href="#">
+                    персональных данных
+                  </a>
+                </p>
               </label>
-              <p>
-                <span class="input-require-star">
-                  *
-                </span>
-                Я согласен на обработку моих
-                <a href="#">
-                  персональных данных
-                </a>
-              </p>
             </label>
 
             <button class="btn-default modal__ok" type="submit">
@@ -886,7 +900,7 @@
               Введите данные для заказа
             </div>
 
-            <form>
+            <form id="offer-eat-form" name="offerEatForm" method="POST">
 
               <label class="input-default-wrapper">
                 <span class="input-default-label">
@@ -904,20 +918,18 @@
                 <input class="input-default" name="tel" type="tel">
               </label>
 
-              <label class="form-agreement-default items-start">
-                <label class="checkbox-custom flex">
+              <label class="form-agreement-default">
+                <label class="checkbox-custom items-start">
                   <input class="visually-hidden" type="checkbox" name="agreement">
-                  <span></span>
+                  <span class="checkbox-custom__label"></span>
+                  <p>
+                    <span class="input-require-star">*</span>
+                    Я согласен на обработку моих
+                    <a href="#">
+                      персональных данных
+                    </a>
+                  </p>
                 </label>
-                <p>
-                  <span class="input-require-star">
-                    *
-                  </span>
-                  Я согласен на обработку моих
-                  <a href="#">
-                    персональных данных
-                  </a>
-                </p>
               </label>
 
               <button class="btn-default modal__ok" type="submit">

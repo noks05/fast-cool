@@ -27,7 +27,7 @@
     const clickInClose = target.closest('.modal__close')
     const clickInOk = target.closest('.modal__ok')
 
-    if (!clickInBox || clickInClose || clickInOk) {
+    if (!clickInBox || clickInClose) {
       document.body.style.overflow = 'initial'
       document.body.style.paddingRight = '0'
       bgFixed.style.right = '0'

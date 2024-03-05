@@ -517,7 +517,26 @@
 
 .delivery-form__tel {}
 
-.delivery-form__date {}
+.delivery-form__date input {
+  cursor: pointer;
+}
+
+.delivery-form__input-wrap {
+  position: relative;
+  cursor: pointer;
+}
+
+.delivery-form__date svg {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+  opacity: 0.5;
+  transition: opacity var(--transition-duration-2);
+}
+
+.delivery-form__date:hover svg {
+  opacity: 1;
+}
 
 .delivery-form__guests {}
 
@@ -844,8 +863,8 @@
 
 /* footer  */
 .footer {
-  height: 100px;
-  background-color: #fff;
+  height: 50px;
+  background-color: var(--white-smoke);
 }
 
 
@@ -931,19 +950,22 @@
   margin-bottom: 30px;
 }
 
-.content-offer-call .form-agreement-default,
-.content-offer-eat .form-agreement-default {
+.content-offer-call .checkbox-custom,
+.content-offer-eat .checkbox-custom {
   margin-top: 40px;
-  margin-bottom: 40px;
   padding-left: 8px;
 }
 
-
-.content-offer-call .form-agreement-default p,
-.content-offer-eat .form-agreement-default p {
+.content-offer-call .checkbox-custom p,
+.content-offer-eat .checkbox-custom p {
   font-weight: 400;
   line-height: 120%;
   color: var(--dark-light);
+}
+
+.content-offer-call .modal__ok,
+.content-offer-eat .modal__ok {
+  margin-top: 40px;
 }
 
 /* .content-offer-call  */
@@ -989,6 +1011,10 @@
 .modal.offer-eat .content-offer-eat {
   display: flex;
   min-height: 540px;
+}
+
+.content-offer-eat .form-agreement-default {
+  text-align: start;
 }
 
 .content-offer-eat__right .input-default-label {

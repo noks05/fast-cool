@@ -32,7 +32,7 @@
     indexSlide = numSlide && numSlide - 1
 
     modalGallery.classList.add('active')
-    swiperModalGallery.slideTo(indexSlide, 1000, false)
+    swiperModalGallery.slideTo(indexSlide)
   }
 
   modalGallery.addEventListener('click', (e) => {

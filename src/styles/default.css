@@ -82,7 +82,7 @@ section {
   height: 22px;
   margin-right: 8px;
   border-radius: 2px;
-  border: 1px solid var(--dark-lighter-01);
+  border: 1px solid var(--grey-lighter);
   transition: background-color var(--transition-duration-2);
   overflow: hidden;
   cursor: pointer;

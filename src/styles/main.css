@@ -177,8 +177,9 @@
 
 /* bg - header  */
 .bg-fixed {
-  position: fixed;
+  position: absolute;
   inset: 0;
+  background-attachment: fixed;
   background-image: url('https://lp3-gr-fast-food.21.oml.ru/d/3609706/d/1212.jpg');
   background-position: 50%;
   background-repeat: no-repeat;
@@ -188,9 +189,11 @@
 }
 
 .bg-block-transparent {
+  position: relative;
   width: 100%;
   height: 444px;
   background-color: transparent;
+  overflow: hidden;
 }
 
 
@@ -398,27 +401,36 @@
   padding-block: 32px;
 }
 
-.about-us__container::before,
-.about-us__container::after {
+.about-us__img-first,
+.about-us__img-last {
   content: '';
   position: absolute;
-  height: 417px;
-  width: 628px;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  max-height: 417px;
+  max-width: 628px;
   border-radius: 16px;
   background-repeat: no-repeat;
   background-size: contain;
+  overflow: hidden;
 }
 
-.about-us__container::before {
+.about-us__img-first {
   top: 0;
   left: 0;
-  background-image: url('https://lp3-gr-fast-food.21.oml.ru/thumb/2/s9cRrp_0R0yH6LI6k7zyUQ/628r/d/55219694_2.jpg');
 }
 
-.about-us__container::after {
+.about-us__img-last {
   bottom: 0;
   right: 0;
-  background-image: url('	https://lp3-gr-fast-food.21.oml.ru/thumb/2/tm0u3eUtSH-8qfxVxtrBUA/628r/d/55224334_2.jpg');
+}
+
+.about-us__img-first img,
+.about-us__img-last img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .about-us__block {
@@ -444,7 +456,7 @@
   color: var(--dark-lighter-07);
 }
 
-.about-us__descr>p {
+.about-us__descr>p:not(:last-child) {
   margin-bottom: 25px;
 }
 
@@ -638,6 +650,7 @@
 
 .swiper .swiper-slide {
   display: flex;
+  align-items: center;
 }
 
 .swiper.swiper-modal-gallery {
@@ -667,7 +680,6 @@
 
 .swiper.swiper-modal-gallery .swiper-slide img {
   display: block;
-  width: auto;
   height: auto;
   margin-inline: auto;
 }
@@ -885,17 +897,19 @@
   width: 100%;
   height: 100%;
   padding: 10px;
+  padding-top: 50px;
   background-color: var(--dark-06);
+  overflow: auto;
 }
 
 .modal__box {
   position: relative;
-  top: 15vh;
   margin-inline: auto;
-  transform: translateY(-50%);
+  padding-top: 48px;
 }
 
 .modal__content {
+  position: relative;
   border-radius: 16px;
   background-color: #fff;
   overflow: hidden;
@@ -919,8 +933,8 @@
 
 .modal__close {
   position: absolute;
-  top: -35px;
-  right: 7px;
+  top: 8px;
+  right: 2px;
   height: 30px;
   width: 30px;
   transition: transform var(--transition-duration-2);

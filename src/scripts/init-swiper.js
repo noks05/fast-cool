@@ -9,6 +9,12 @@
     },
     on: {
       click: activeModalGallery,
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+      },
     }
   });
   const swiperModalGallery = new Swiper('.swiper-modal-gallery', {

@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./src/styles/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./src/libs/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./src/libs/air-datepicker.css">
   <link rel="stylesheet" href="./src/styles/main.css">
   <link rel="stylesheet" href="./src/styles/media.css">
-  <link rel="stylesheet" href="./src/styles/air-datepicker.css">
   <script src="./src/libs/air-datepicker.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=286ea9a9-390c-46e4-9292-b3b654cb53c6&lang=ru_RU"
     type="text/javascript"></script>
@@ -116,7 +116,7 @@
 
     </div> <!-- header__container  -->
 
-    <nav class="nav nav-main content-center">
+    <nav class="nav nav-main content-center container">
       <ul class="nav__list items-center">
         <li class="nav__item">
           <a class="nav-link" href="#menu">
@@ -163,7 +163,7 @@
       </button>
     </nav> <!-- nav  -->
 
-    <nav class="nav nav-fixed content-center">
+    <nav class="nav nav-fixed content-center container">
       <ul class="nav__list items-center">
         <li class="nav__item">
           <a class="nav-link" href="#menu">
@@ -211,8 +211,10 @@
     </nav> <!-- nav-fixed  -->
   </header>
 
-  <div class="bg-fixed"></div>
-  <div class="bg-block-transparent"></div>
+
+  <div class="bg-block-transparent">
+    <div class="bg-fixed"></div>
+  </div>
 
   <main>
     <section class="menu" id="menu">
@@ -431,6 +433,10 @@
     <section class="about-us" id="about-us">
       <div class="container about-us__container">
 
+        <div class="about-us__img-first">
+          <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/s9cRrp_0R0yH6LI6k7zyUQ/628r/d/55219694_2.jpg" alt="">
+        </div>
+
         <div class="about-us__block">
           <h2 class="about-us__title section-title">
             О нас
@@ -450,7 +456,12 @@
             </p>
           </div>
         </div>
-      </div> <!-- container  -->
+
+        <div class="about-us__img-last ">
+          <img src="https://lp3-gr-fast-food.21.oml.ru/thumb/2/tm0u3eUtSH-8qfxVxtrBUA/628r/d/55224334_2.jpg" alt="">
+        </div>
+
+      </div> <!-- about-us__container  -->
 
     </section>
 
@@ -734,8 +745,6 @@
 
     <section class="contacts" id="contacts">
 
-      <div class="contacts__map" id="map"></div>
-
       <address class="contacts__contacts-box">
         <h2 class="contacts__title section-title">
           Контакты
@@ -818,6 +827,8 @@
         </ul> <!-- contacts__socials  -->
 
       </address>
+
+      <div class="contacts__map" id="map"></div>
 
     </section>
 

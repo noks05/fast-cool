@@ -1,6 +1,5 @@
 (() => {
   const swiperGallery = new Swiper('.swiper-gallery', {
-    slidesPerView: 'auto',
     loop: true,
     speed: 400,
     spaceBetween: 5,
@@ -15,9 +14,13 @@
       320: {
         slidesPerView: 1,
       },
+      600: {
+        slidesPerView: 'auto',
+      },
     }
   });
   const swiperModalGallery = new Swiper('.swiper-modal-gallery', {
+    slidesPerView: 'auto',
     loop: true,
     speed: 600,
     grabCursor: true,

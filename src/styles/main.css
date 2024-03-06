@@ -46,7 +46,10 @@
   color: var(--dark-light);
 }
 
-.header__logo-block {}
+.header__logo-block {
+  max-width: 450px;
+  margin-inline: 20px;
+}
 
 .logo-block {}
 
@@ -83,6 +86,10 @@
   padding-block: 30px;
   box-shadow: 0 -8px 20px 15px var(--dark-lighter-01);
   z-index: 1000;
+}
+
+.nav-fixed.container {
+  max-width: 100%;
 }
 
 .nav-main.disabled+.nav-fixed {
@@ -130,11 +137,7 @@
 }
 
 .nav__burger-btn.nav__burger-btn-active {
-  display: flex;
-}
-
-.nav__burger-btn.nav__burger-btn-active.active {
-  display: flex;
+  display: none;
 }
 
 .burger-menu {
@@ -176,24 +179,24 @@
 
 
 /* bg - header  */
+.bg-block-transparent {
+  position: relative;
+  width: 100%;
+  height: clamp(204px, 50vw, 444px);
+  background-color: transparent;
+  overflow: hidden;
+}
+
 .bg-fixed {
   position: absolute;
   inset: 0;
   background-attachment: fixed;
   background-image: url('https://lp3-gr-fast-food.21.oml.ru/d/3609706/d/1212.jpg');
-  background-position: 50%;
+  background-position: 50% center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: transparent;
   z-index: -1;
-}
-
-.bg-block-transparent {
-  position: relative;
-  width: 100%;
-  height: 444px;
-  background-color: transparent;
-  overflow: hidden;
 }
 
 
@@ -211,12 +214,15 @@
 }
 
 .menu__tabs-wrap {
+  width: 100%;
   margin-bottom: 30px;
   padding-top: 30px;
   border-bottom: 1px solid var(--grey-lighter);
+  overflow: auto;
 }
 
 .menu__tabs {
+  width: 100%;
   padding-inline: 30px;
 }
 
@@ -272,7 +278,7 @@
   display: none;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
-  gap: 35px;
+  gap: 32px;
 }
 
 .menu__content-list.content-active {
@@ -280,6 +286,8 @@
 }
 
 .menu-card {
+  width: 100%;
+  /* max-width: 292px; */
   padding: 16px;
   border-radius: 16px;
   border: 1px solid var(--dark-lighter-01);
@@ -288,7 +296,8 @@
 }
 
 .menu-card__img-wrap {
-  width: 258px;
+  width: 100%;
+  max-width: 258px;
   height: 265px;
   margin-bottom: 15px;
   border-radius: 12px;
@@ -398,7 +407,7 @@
 
 .about-us__container {
   position: relative;
-  padding-block: 32px;
+  padding-block: 240px;
 }
 
 .about-us__img-first,
@@ -418,12 +427,12 @@
 
 .about-us__img-first {
   top: 0;
-  left: 0;
+  left: 15px;
 }
 
 .about-us__img-last {
   bottom: 0;
-  right: 0;
+  right: 15px;
 }
 
 .about-us__img-first img,

@@ -4,6 +4,9 @@
   const btnBurgerActive = document.querySelectorAll('.nav__burger-btn-active');
   const btnBurgerClose = document.querySelector('.nav__burger-btn-close');
   const bgFixed = document.querySelector('.bg-fixed');
+  const innerWidth = window.innerWidth
+  const innerWidthWithScroll = document.documentElement.clientWidth
+  const scrollWidth = innerWidth - innerWidthWithScroll
 
   btnBurgerActive.forEach(el => el.addEventListener('click', openBurgerMenu))
   btnBurgerClose.addEventListener('click', closeBurgerMenu)
@@ -11,8 +14,8 @@
 
   function openBurgerMenu() {
     document.body.style.overflow = 'hidden'
-    document.body.style.paddingRight = '17px'
-    bgFixed.style.right = '17px'
+    document.body.style.paddingRight = scrollWidth + 'px'
+    bgFixed.style.backgroundPositionX = '51.5%'
 
     burgerMenu.classList.remove('fadeOut')
     burgerMenu.firstElementChild.classList.remove('fadeOutRight')
@@ -24,7 +27,7 @@
   function closeBurgerMenu() {
     document.body.style.overflow = 'initial'
     document.body.style.paddingRight = '0'
-    bgFixed.style.right = '0'
+    bgFixed.style.backgroundPositionX = '50%'
 
     burgerMenu.classList.remove('fadeIn')
     burgerMenu.firstElementChild.classList.remove('fadeInRight')

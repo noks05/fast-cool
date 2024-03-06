@@ -1,5 +1,6 @@
 /* glop  */
-@media (min-width:10px) {
+@media (min-width:10px) and (max-width:1024px) {
+
   .section-title {
     font-size: 30px;
     line-height: 125%;
@@ -11,10 +12,48 @@
   }
 }
 
+@media (min-width:600px) and (max-width:1200px) {
+
+  .menu,
+  .advantages,
+  .about-us,
+  .spec-offers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width:600px) and (max-width:1024px) {
+  .section-title {
+    font-size: 35px;
+    line-height: 125%;
+  }
+}
+
+
+@media (min-width:600px) and (max-width:960px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+@media (min-width:960px) and (max-width:1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width:1200px) and (max-width:1380px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
 
 
 /* header  */
-@media (min-width:10px) {
+@media (min-width:10px) and (max-width:960px) {
   .header__container {
     flex-direction: column;
     text-align: center;
@@ -42,37 +81,71 @@
     font-size: 16px;
     line-height: 150%;
   }
+}
+
+@media (min-width:600px) and (max-width:1024px) {
+
+  .header__logo-block h1 {
+    font-size: 22px;
+    line-height: 145%;
+  }
+
+  .tel-info__img {
+    display: block;
+  }
+
+  .tel-info__tel {
+    font-size: 18px;
+    line-height: 156%;
+  }
+}
+
+@media (min-width:600px) and (max-width:960px) {
+  .header__container {
+    max-width: 600px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .header__logo-block {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
 
 
-  /* nav  */
+
+
+/* nav  */
+@media (min-width:10px) and (max-width:1380px) {
   .nav__list {
     display: none;
   }
 
-  .nav__burger-btn {
+  .nav__burger-btn.nav__burger-btn-active {
+    display: flex;
     margin-left: auto;
   }
+}
 
+@media (min-width:600px) and (max-width:960px) {
 
-  /* bg - fixed  */
-  .bg-block-transparent {
-    height: 294px;
-  }
-
-
-  /* bg - fixed  */
-  .bg-fixed {
-    background-size: 1000px;
+  .nav.nav-main {
+    max-width: 600px;
   }
 }
 
 
 
 /* menu  */
-@media (min-width:10px) {
+@media (min-width:10px) and (max-width:1200px) {
+
   .menu__tabs {
-    overflow: auto;
+    max-width: 940px;
   }
+}
+
+@media (min-width:10px) and (max-width:1024px) {
 
   .menu__tab-btn {
     font-size: 17px;
@@ -83,19 +156,85 @@
   }
 }
 
+@media (min-width:10px) and (max-width:960px) {
+
+  .menu__tabs {
+    width: fit-content;
+  }
+}
+
+@media (min-width:10px) and (max-width:600px) {
+
+  .menu-card__img-wrap {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width:600px) and (max-width:1200px) {
+
+  .menu-card {
+    max-width: 292px;
+  }
+}
+
+@media (min-width:600px) and (max-width:1024px) {
+
+  .menu__content-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width:960px) and (max-width:1200px) {
+
+  .menu__content-list {
+    grid-template-columns: repeat(3, 292px);
+  }
+}
+
+@media (min-width:960px) and (max-width:1024px) {
+  .menu__tab-btn {
+    font-size: 18px;
+  }
+}
+
+@media (min-width:1200px) and (max-width:1380px) {
+
+  .menu__content-list {
+    gap: 25px;
+  }
+}
+
 
 
 /* advantages  */
-@media (min-width:10px) {
+@media (min-width:10px) and (max-width:600px) {
   .advantages__list {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width:600px) and (max-width:960px) {
+  .advantages__list {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .advantages__item:nth-child(3n) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .advantages__text {
+    max-width: 276px;
+    margin-inline: auto;
   }
 }
 
 
 
 /* about-us  */
-@media (min-width:10px) {
+@media (min-width:10px) and (max-width:960px) {
 
   .about-us {
     padding-bottom: 0;
@@ -103,7 +242,9 @@
 
   .about-us__img-first,
   .about-us__img-last {
-    position: relative;
+    position: static;
+    width: auto;
+    height: 288px;
   }
 
   .about-us__title {
@@ -115,19 +256,42 @@
   }
 }
 
+@media (min-width:10px) and (max-width:600px) {
+
+  .about-us__img-first,
+  .about-us__img-last {
+    height: 198px;
+  }
+}
+
+@media (min-width:960px) and (max-width:1200px) {
+
+  .about-us__img-first,
+  .about-us__img-last {
+    width: 432px;
+    height: auto;
+  }
+}
+
+@media (min-width:1200px) and (max-width:1380px) {
+
+  .about-us__img-first,
+  .about-us__img-last {
+    width: 564px;
+    height: auto;
+  }
+}
 
 
 /* delivery  */
-@media (min-width:10px) {
-
-  .delivery__left {
-    display: none;
+@media (min-width:10px) and (max-width:1200px) {
+  .delivery-form__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
+}
 
-  .delivery__right {
-    width: auto;
-    padding: 32px 16px;
-  }
+@media (min-width:10px) and (max-width:600px) {
 
   .delivery__title {
     font-size: 22px;
@@ -137,16 +301,75 @@
     font-size: 17px;
   }
 
-  .delivery-form__container {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+  .delivery__left {
+    display: none;
+  }
+
+  .delivery__right {
+    width: 100%;
+    padding: 32px 16px;
+  }
+
+  .delivery__right-inner {
+    max-width: 100%;
+  }
+}
+
+@media (min-width:10px) and (max-width:1200px) {
+
+  .delivery-form__submit {
+    margin-top: 60px;
+  }
+}
+
+@media (min-width:480px) and (max-width:600px) {
+
+  .delivery__title {
+    font-size: 28px;
+  }
+
+  .delivery__descr {
+    font-size: 18px;
+  }
+}
+
+@media (min-width:600px) {
+
+  .delivery__left {
+    display: block;
+  }
+
+  .delivery__right {
+    padding: 64px 12px;
+  }
+}
+
+@media (min-width:600px) and (max-width:960px) {
+
+  .delivery__title {
+    font-size: 28px;
+  }
+
+  .delivery__descr {
+    font-size: 18px;
+  }
+}
+
+@media (min-width:960px) and (max-width:1200px) {
+
+  .delivery__title {
+    font-size: 32px;
+  }
+
+  .delivery__descr {
+    font-size: 19px;
   }
 }
 
 
 
 /* spec-offers  */
-@media (min-width:10px) {
+@media (min-width:10px) and (max-width:1024px) {
 
   .spec-offers__title {
     letter-spacing: 0.8px;
@@ -168,7 +391,7 @@
 
 
 /* gallery */
-@media (min-width:10px) {
+@media (min-width:10px) and (max-width:1024px) {
 
   .swiper.swiper-gallery {
     max-height: 300px;
@@ -189,7 +412,7 @@
 
 
 /* contacts */
-@media (min-width:10px) {
+@media (min-width:10px) and (max-width:1024px) {
 
   #map {
     position: relative;
@@ -208,7 +431,7 @@
     box-shadow: none;
   }
 
-  @media (min-width:10px) {
+  @media (min-width:10px) and (max-width:1024px) {
 
     #map {
       position: relative;
@@ -244,7 +467,7 @@
 
 
 /* modal offer-call */
-@media (min-width:10px) {
+@media (min-width:10px) and (max-width:1024px) {
 
   .modal__content {
     padding: 16px;

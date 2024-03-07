@@ -79,7 +79,7 @@ html, body {
 body {
   position: relative;
   min-width: 320px;
-  max-width: calc(var(--container-padding-x)*2 + var(--container-width));
+  max-width: 1920px;
   margin-inline: auto;
   font-family: 'Montserrat', sans-serif;
   background-color: #fff;

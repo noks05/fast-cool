@@ -45,7 +45,7 @@
   animation: fadeOutUp .3s ease-in-out forwards;
 }
 
-@keyframes fadeInDown {
+@keyframes fadeInUp {
   0% {
     opacity: 0;
     transform: translateY(-100%);
@@ -57,8 +57,40 @@
   }
 }
 
+.fadeInUp {
+  animation: fadeInUp .3s ease-in-out forwards;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .fadeInDown {
-  animation: fadeInDown .3s ease-in-out forwards;
+  animation: fadeInDown 1s ease-out forwards;
+}
+
+@keyframes fadeInDownSectionTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInDownSectionTitle {
+  animation: fadeInDownSectionTitle 1s ease-out forwards;
 }
 
 

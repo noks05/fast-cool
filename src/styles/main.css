@@ -196,6 +196,10 @@
   background-color: #fff;
 }
 
+.menu__title span {
+  display: block;
+}
+
 .menu__tabs-wrap {
   width: 100%;
   margin-bottom: 30px;
@@ -324,11 +328,16 @@
   margin-bottom: 32px;
 }
 
+.advantages__title span {
+  display: block;
+}
+
 .advantages__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   gap: 48px;
+  animation-delay: .2s;
 }
 
 .advantages__box {
@@ -382,6 +391,7 @@
 /* about-us  */
 .about-us {
   padding-block: 50px;
+  animation-duration: .3s;
 }
 
 .about-us__container {
@@ -407,11 +417,13 @@
 .about-us__img-first {
   top: 0;
   left: 15px;
+  animation-delay: .05s;
 }
 
 .about-us__img-last {
   bottom: 0;
   right: 15px;
+  animation-delay: .15s;
 }
 
 .about-us__img-first img,
@@ -430,6 +442,7 @@
   border-radius: 16px;
   background-color: #fff;
   z-index: 1;
+  animation-delay: .1s;
 }
 
 .about-us__title {

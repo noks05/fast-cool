@@ -14,12 +14,12 @@
       nav.classList.add('disabled')
       nav.classList.remove('fadeIn')
       navFixed.classList.remove('fadeOutUp')
-      navFixed.classList.add('fadeInDown')
+      navFixed.classList.add('fadeInUp')
 
     } else if (!timeNav && !navFixedDisable) {
       navFixedDisable = true
 
-      navFixed.classList.remove('fadeInDown')
+      navFixed.classList.remove('fadeInUp')
       navFixed.classList.add('fadeOutUp')
       setTimeout(() => {
         nav.classList.remove('disabled')

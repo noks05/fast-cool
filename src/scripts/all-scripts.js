@@ -1,0 +1,8 @@
+import './init-map-yandex.js'
+import './init-swiper.js'
+import './modal.js'
+import './burger-menu.js'
+import './handlers.js'
+import './menu-tabs.js'
+import './init-plugins.js'
+import './animation-page.js'

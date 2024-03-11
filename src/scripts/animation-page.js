@@ -20,7 +20,6 @@
   function onEntry(entries) {
     entries.forEach(entry => {
       const target = entry.target
-      console.log(target.className)
 
       if (entry.isIntersecting) {
         switch (target.className.split(' ')[0]) {

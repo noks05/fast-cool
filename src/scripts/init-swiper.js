@@ -38,7 +38,7 @@
 
   function activeModalGallery(e) {
     const numSlide = Number(e.clickedSlide.ariaLabel.split('/')[0].trim())
-    indexSlide = numSlide && numSlide - 1
+    const indexSlide = numSlide && numSlide - 1
 
     modalGallery.classList.add('active')
     swiperModalGallery.slideTo(indexSlide)

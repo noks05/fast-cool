@@ -342,10 +342,12 @@
 
 .advantages__box {
   padding-top: 24px;
+  height: 100%;
 }
 
 .advantages__text {
   position: relative;
+  height: 100%;
   padding: 32px 16px;
   padding-top: 57px;
   border-radius: 16px;

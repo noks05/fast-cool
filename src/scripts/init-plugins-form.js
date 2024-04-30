@@ -47,26 +47,26 @@
     {
       rule: 'required',
       errorMessage:
-        'это поле обязательно для заполнения',
+        'this field is mandatory',
     },
     {
       rule: 'minLength',
       value: 3,
       errorMessage:
-        'минимум 3 символа',
+        'minimum of 3 characters',
     },
     {
       rule: 'maxLength',
       value: 20,
       errorMessage:
-        'максимум 20 символов',
+        'maximum 20 charactersв',
     },
   ]
   const inputTelRules = (selectorTel) => [
     {
       rule: 'required',
       errorMessage:
-        'это поле обязательно для заполнения',
+        'this field is mandatory',
     },
     {
       validator: function () {
@@ -74,14 +74,14 @@
         return numInput.length === 10
       },
       errorMessage:
-        'номер не корректный',
+        'the number is not correct',
     }
   ]
   const inputAgreementRules = [
     {
       rule: 'required',
       errorMessage:
-        'это поле обязательно для заполнения',
+        'this field is mandatory',
     },
   ]
 
@@ -92,7 +92,7 @@
       {
         rule: 'required',
         errorMessage:
-          'это поле обязательно для заполнения',
+          'this field is mandatory',
       },
     ])
     .addField(deliverySelectorAgreement, [...inputAgreementRules])
